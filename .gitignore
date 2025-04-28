@@ -1,0 +1,33 @@
+# Ignore pastas e arquivos gerados automaticamente pela Unity
+[Ll]ibrary/
+[Tt]emp/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Oo]bj/
+[Mm]emoryCaptures/
+
+# Ignore configurações locais
+.vscode/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+
+# Arquivos de sistema operacional
+.DS_Store
+Thumbs.db
+
+# Ferramentas da Unity Asset Store
+Assets/AssetStoreTools*
+
+# Backup
+*.bak
+
+# Crash Reports
+sysinfo.txt

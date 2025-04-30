@@ -1,16 +1,31 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MenuController : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+
+    [SerializeField] private string playingScene; //might change its name later
+    [SerializeField] private GameObject mainMenuPanel;
+    [SerializeField] private GameObject settingsMenuPanel;
+    public void Play()
     {
-        
+        SceneManager.LoadScene(playingScene);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OpenSettings()
     {
-        
+        mainMenuPanel.SetActive(false);
+        settingsMenuPanel.SetActive(true);
+    }
+
+    public void CloseSettings()
+    {
+        settingsMenuPanel.SetActive(false);
+        mainMenuPanel.SetActive(true);
+    }
+    public void QuitGame()
+    {
+        Debug.Log("Quiting Game...");
+        Application.Quit();
     }
 }

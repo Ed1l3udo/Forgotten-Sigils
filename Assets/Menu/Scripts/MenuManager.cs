@@ -1,12 +1,20 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MenuController : MonoBehaviour
+public class MenuManager : MonoBehaviour
 {
 
     [SerializeField] private string playingScene; //might change its name later
     [SerializeField] private GameObject mainMenuPanel;
     [SerializeField] private GameObject settingsMenuPanel;
+
+    public void Start()
+    {
+        if(settingsMenuPanel != null)
+        {
+            settingsMenuPanel.SetActive(false);
+        }
+    }
     public void Play()
     {
         SceneManager.LoadScene(playingScene);

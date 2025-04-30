@@ -1330,7 +1330,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 936728035}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1302339527}
+        m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!114 &936728035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1600,7 +1612,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1128850850}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1302339527}
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+        m_MethodName: QuitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!114 &1128850850
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1668,7 +1692,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96e9f0fbb34c417469f0e37bb81169b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playingScene: 
+  playingScene: PlayingScene
   mainMenuPanel: {fileID: 954912921}
   settingsMenuPanel: {fileID: 1354665502}
 --- !u!4 &1302339528
@@ -1680,7 +1704,7 @@ Transform:
   m_GameObject: {fileID: 1302339526}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 336.9777, y: 231.5855, z: -2.4923944}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2324,7 +2348,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1665102276}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1302339527}
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+        m_MethodName: CloseSettings
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!114 &1665102276
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2445,7 +2481,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1694715422}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1302339527}
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+        m_MethodName: OpenSettings
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!114 &1694715422
 MonoBehaviour:
   m_ObjectHideFlags: 0

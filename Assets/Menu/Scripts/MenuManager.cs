@@ -3,18 +3,20 @@ using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
-
+    
     [SerializeField] private string playingScene; //might change its name later
     [SerializeField] private GameObject mainMenuPanel;
     [SerializeField] private GameObject settingsMenuPanel;
 
     public void Start()
     {
+        //This automatize it, but it can also be done by just setting it off when making the game build
         if(settingsMenuPanel != null)
         {
             settingsMenuPanel.SetActive(false);
         }
-    }
+    } 
+
     public void Play()
     {
         SceneManager.LoadScene(playingScene);

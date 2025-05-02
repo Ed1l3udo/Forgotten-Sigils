@@ -19,6 +19,14 @@ public class InputNavigationController : MonoBehaviour
         ApplyNavigationRules();
     }
 
+    public void ForceKeyboardControl(GameObject focusObject)
+    {
+        usingKeyboard = true;
+        lastSelected = focusObject;
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(focusObject);
+    }
+
     private void DetectInputMethod()
     {
         // Detecta movimentação do mouse

@@ -3,19 +3,14 @@ using UnityEngine.UI;
 
 public class AudioController : MonoBehaviour
 {
+    
     [SerializeField] private AudioSource audioSourceMainTheme;
-    [SerializeField] private Slider volumeSlider;
+    [SerializeField] private Slider musicVolumeSlider;
     void Start()
     {
         Load();
         audioSourceMainTheme.loop = true;
         audioSourceMainTheme.Play();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void SetMusicVolume(float volume)
@@ -26,10 +21,9 @@ public class AudioController : MonoBehaviour
 
     private void Load()
     {
-        float savedVolume = PlayerPrefs.GetFloat("musicVolume", 1f);
-         Debug.Log("Volume carregado: " + savedVolume);
-        audioSourceMainTheme.volume = savedVolume;
-        volumeSlider.value = savedVolume; 
+        float savedMusicVolume = PlayerPrefs.GetFloat("musicVolume", 1f);
+        audioSourceMainTheme.volume = savedMusicVolume;
+        musicVolumeSlider.value = savedMusicVolume; 
     }
 
     private void Save(float volume)

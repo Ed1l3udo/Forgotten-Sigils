@@ -392,7 +392,6 @@ GameObject:
   - component: {fileID: 364176895}
   - component: {fileID: 364176897}
   - component: {fileID: 364176896}
-  - component: {fileID: 364176898}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -518,18 +517,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 364176894}
   m_CullTransparentMesh: 1
---- !u!114 &364176898
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 364176894}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f1a47983a742bb42a16058dcd1e2831, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &411690139
 GameObject:
   m_ObjectHideFlags: 0
@@ -541,7 +528,6 @@ GameObject:
   - component: {fileID: 411690140}
   - component: {fileID: 411690143}
   - component: {fileID: 411690142}
-  - component: {fileID: 411690141}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -568,18 +554,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &411690141
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 411690139}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f1a47983a742bb42a16058dcd1e2831, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &411690142
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1260,6 +1234,7 @@ GameObject:
   - component: {fileID: 936728036}
   - component: {fileID: 936728035}
   - component: {fileID: 936728034}
+  - component: {fileID: 936728037}
   m_Layer: 5
   m_Name: Play Button
   m_TagString: Untagged
@@ -1300,10 +1275,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 4
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
+    m_SelectOnDown: {fileID: 1694715421}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
@@ -1381,6 +1356,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 936728032}
   m_CullTransparentMesh: 1
+--- !u!114 &936728037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 936728032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f1a47983a742bb42a16058dcd1e2831, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &954912921
 GameObject:
   m_ObjectHideFlags: 0
@@ -1542,6 +1529,7 @@ GameObject:
   - component: {fileID: 1128850851}
   - component: {fileID: 1128850850}
   - component: {fileID: 1128850849}
+  - component: {fileID: 1128850852}
   m_Layer: 5
   m_Name: Quit Button
   m_TagString: Untagged
@@ -1582,9 +1570,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
+    m_SelectOnUp: {fileID: 1694715421}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
@@ -1663,6 +1651,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1128850847}
   m_CullTransparentMesh: 1
+--- !u!114 &1128850852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1128850847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f1a47983a742bb42a16058dcd1e2831, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1302339526
 GameObject:
   m_ObjectHideFlags: 0
@@ -1674,7 +1674,7 @@ GameObject:
   - component: {fileID: 1302339528}
   - component: {fileID: 1302339527}
   m_Layer: 0
-  m_Name: MenuManager
+  m_Name: Menu Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1692,6 +1692,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96e9f0fbb34c417469f0e37bb81169b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  defaultSelected: {fileID: 936728032}
   playingScene: PlayingScene
   mainMenuPanel: {fileID: 954912921}
   settingsMenuPanel: {fileID: 1354665502}
@@ -1990,6 +1991,51 @@ Transform:
   m_GameObject: {fileID: 1372986813}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 336.9777, y: 231.5855, z: -2.4923944}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1450034925
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1450034927}
+  - component: {fileID: 1450034926}
+  m_Layer: 0
+  m_Name: Input Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1450034926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1450034925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec7c6a0357f5abe4bbd66096d1684e0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultButton: {fileID: 936728032}
+--- !u!4 &1450034927
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1450034925}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 336.9777, y: 231.5855, z: -2.4923944}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2567,6 +2613,7 @@ GameObject:
   - component: {fileID: 1694715423}
   - component: {fileID: 1694715422}
   - component: {fileID: 1694715421}
+  - component: {fileID: 1694715424}
   m_Layer: 5
   m_Name: Settings Button
   m_TagString: Untagged
@@ -2607,10 +2654,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
+    m_SelectOnUp: {fileID: 936728034}
+    m_SelectOnDown: {fileID: 1128850849}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
@@ -2688,6 +2735,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1694715419}
   m_CullTransparentMesh: 1
+--- !u!114 &1694715424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1694715419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f1a47983a742bb42a16058dcd1e2831, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1711458469
 GameObject:
   m_ObjectHideFlags: 0
@@ -2778,7 +2837,6 @@ GameObject:
   - component: {fileID: 1781523978}
   - component: {fileID: 1781523980}
   - component: {fileID: 1781523979}
-  - component: {fileID: 1781523981}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -2904,18 +2962,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1781523977}
   m_CullTransparentMesh: 1
---- !u!114 &1781523981
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1781523977}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f1a47983a742bb42a16058dcd1e2831, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1788445379
 GameObject:
   m_ObjectHideFlags: 0
@@ -3336,6 +3382,7 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 1302339528}
   - {fileID: 1372986816}
+  - {fileID: 1450034927}
   - {fileID: 619394802}
   - {fileID: 1862904141}
   - {fileID: 1711458472}

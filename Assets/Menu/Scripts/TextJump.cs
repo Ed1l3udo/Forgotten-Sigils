@@ -22,7 +22,6 @@ public class ButtonJump : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
 
     public void OnSelect(BaseEventData eventData)
     {
-        Debug.Log($"{gameObject.name} selecionado!");
         JumpUp();
     }
 

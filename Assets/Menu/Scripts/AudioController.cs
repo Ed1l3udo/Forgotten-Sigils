@@ -25,7 +25,8 @@ public class AudioController : MonoBehaviour
 
     public void SetMusicVolume(float volume)
     {
-        audioSourceMainTheme.volume = volume;
+        float normalizedVolume = volume / 10f; // converte 1–10 para 0.1–1.0
+        audioSourceMainTheme.volume = normalizedVolume;
         Save(volume);
     }
 

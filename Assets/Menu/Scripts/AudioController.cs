@@ -5,12 +5,22 @@ public class AudioController : MonoBehaviour
 {
     
     [SerializeField] private AudioSource audioSourceMainTheme;
+    [SerializeField] private AudioSource selectionSoundUiAudioSource;
+    [SerializeField] private AudioClip selectionSoundClip; 
     [SerializeField] private Slider musicVolumeSlider;
     void Start()
     {
         Load();
         audioSourceMainTheme.loop = true;
         audioSourceMainTheme.Play();
+    }
+
+    public void PlaySelectionSound()
+    {
+        if (selectionSoundUiAudioSource != null && selectionSoundClip != null)
+        {
+            selectionSoundUiAudioSource.PlayOneShot(selectionSoundClip);
+        }
     }
 
     public void SetMusicVolume(float volume)

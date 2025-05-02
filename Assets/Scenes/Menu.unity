@@ -995,6 +995,7 @@ GameObject:
   m_Component:
   - component: {fileID: 686360318}
   - component: {fileID: 686360319}
+  - component: {fileID: 686360320}
   m_Layer: 5
   m_Name: Slider
   m_TagString: Untagged
@@ -1075,6 +1076,19 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &686360320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 686360317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d2a8c5a83ee4824a952345d42ef6769, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioController: {fileID: 1372986815}
 --- !u!1 &732221623
 GameObject:
   m_ObjectHideFlags: 0
@@ -1235,6 +1249,7 @@ GameObject:
   - component: {fileID: 936728035}
   - component: {fileID: 936728034}
   - component: {fileID: 936728037}
+  - component: {fileID: 936728038}
   m_Layer: 5
   m_Name: Play Button
   m_TagString: Untagged
@@ -1368,6 +1383,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f1a47983a742bb42a16058dcd1e2831, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &936728038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 936728032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d2a8c5a83ee4824a952345d42ef6769, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioController: {fileID: 1372986815}
 --- !u!1 &954912921
 GameObject:
   m_ObjectHideFlags: 0
@@ -1530,6 +1558,7 @@ GameObject:
   - component: {fileID: 1128850850}
   - component: {fileID: 1128850849}
   - component: {fileID: 1128850852}
+  - component: {fileID: 1128850853}
   m_Layer: 5
   m_Name: Quit Button
   m_TagString: Untagged
@@ -1663,6 +1692,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f1a47983a742bb42a16058dcd1e2831, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1128850853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1128850847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d2a8c5a83ee4824a952345d42ef6769, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioController: {fileID: 1372986815}
 --- !u!1 &1302339526
 GameObject:
   m_ObjectHideFlags: 0
@@ -1724,6 +1766,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1352476742}
   - component: {fileID: 1352476743}
+  - component: {fileID: 1352476744}
   m_Layer: 5
   m_Name: Slider
   m_TagString: Untagged
@@ -1816,6 +1859,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 1
+--- !u!114 &1352476744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1352476741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d2a8c5a83ee4824a952345d42ef6769, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioController: {fileID: 1372986815}
 --- !u!1 &1354665502
 GameObject:
   m_ObjectHideFlags: 0
@@ -1867,6 +1923,7 @@ GameObject:
   - component: {fileID: 1372986816}
   - component: {fileID: 1372986815}
   - component: {fileID: 1372986814}
+  - component: {fileID: 1372986817}
   m_Layer: 0
   m_Name: Audio Controller
   m_TagString: Untagged
@@ -1984,7 +2041,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSourceMainTheme: {fileID: 1372986814}
-  musicVolumeSlider: {fileID: 0}
+  selectionSoundUiAudioSource: {fileID: 1372986817}
+  selectionSoundClip: {fileID: 8300000, guid: b38c1086cf007394598dac55d6b12afb, type: 3}
+  musicVolumeSlider: {fileID: 1352476743}
 --- !u!4 &1372986816
 Transform:
   m_ObjectHideFlags: 0
@@ -2000,6 +2059,103 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1372986817
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1372986813}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1450034925
 GameObject:
   m_ObjectHideFlags: 0
@@ -2484,6 +2640,7 @@ GameObject:
   - component: {fileID: 1665102276}
   - component: {fileID: 1665102275}
   - component: {fileID: 1665102278}
+  - component: {fileID: 1665102279}
   m_Layer: 5
   m_Name: Return Button
   m_TagString: Untagged
@@ -2617,6 +2774,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f1a47983a742bb42a16058dcd1e2831, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1665102279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1665102273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d2a8c5a83ee4824a952345d42ef6769, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioController: {fileID: 1372986815}
 --- !u!1 &1694715419
 GameObject:
   m_ObjectHideFlags: 0
@@ -2630,6 +2800,7 @@ GameObject:
   - component: {fileID: 1694715422}
   - component: {fileID: 1694715421}
   - component: {fileID: 1694715424}
+  - component: {fileID: 1694715425}
   m_Layer: 5
   m_Name: Settings Button
   m_TagString: Untagged
@@ -2763,6 +2934,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f1a47983a742bb42a16058dcd1e2831, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1694715425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1694715419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d2a8c5a83ee4824a952345d42ef6769, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioController: {fileID: 1372986815}
 --- !u!1 &1711458469
 GameObject:
   m_ObjectHideFlags: 0

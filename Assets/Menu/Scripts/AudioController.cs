@@ -3,7 +3,6 @@ using UnityEngine.UI;
 
 public class AudioController : MonoBehaviour
 {
-    
     [SerializeField] private AudioSource audioSourceMainTheme;
     [SerializeField] private AudioSource selectionSoundUiAudioSource;
     [SerializeField] private AudioClip selectionSoundClip; 
@@ -32,8 +31,9 @@ public class AudioController : MonoBehaviour
 
     private void Load()
     {
-        float savedMusicVolume = PlayerPrefs.GetFloat("musicVolume", 1f);
-        audioSourceMainTheme.volume = savedMusicVolume;
+        float savedMusicVolume = PlayerPrefs.GetFloat("musicVolume", 10f);
+        float normalizedVolume = savedMusicVolume / 10;
+        audioSourceMainTheme.volume = normalizedVolume;
         musicVolumeSlider.value = savedMusicVolume; 
     }
 

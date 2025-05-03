@@ -1228,6 +1228,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 1
+      - m_Target: {fileID: 1372986815}
+        m_TargetAssemblyTypeName: AudioController, Assembly-CSharp
+        m_MethodName: SetMasterVolume
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!114 &686360320
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2233,7 +2245,7 @@ AudioSource:
   m_GameObject: {fileID: 1372986813}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 453325980175589192, guid: d487bf877f79943439496bfae13c47e8, type: 2}
   m_audioClip: {fileID: 8300000, guid: 89078b72a7ec08d47bf33dba5a5b031c, type: 3}
   m_Resource: {fileID: 8300000, guid: 89078b72a7ec08d47bf33dba5a5b031c, type: 3}
   m_PlayOnAwake: 1
@@ -2333,10 +2345,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26529f68d8027a04a9f34bb1250ea780, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioMixer: {fileID: 24100000, guid: d487bf877f79943439496bfae13c47e8, type: 2}
   audioSourceMainTheme: {fileID: 1372986814}
   selectionSoundUiAudioSource: {fileID: 1372986817}
   selectionSoundClip: {fileID: 8300000, guid: b38c1086cf007394598dac55d6b12afb, type: 3}
   musicVolumeSlider: {fileID: 1352476743}
+  masterVolumeSlider: {fileID: 686360319}
 --- !u!4 &1372986816
 Transform:
   m_ObjectHideFlags: 0
@@ -2361,7 +2375,7 @@ AudioSource:
   m_GameObject: {fileID: 1372986813}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 1487179966684223797, guid: d487bf877f79943439496bfae13c47e8, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
@@ -3977,7 +3991,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1998078408}
   m_Layer: 5
-  m_Name: General Volume Slider
+  m_Name: Master Volume Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

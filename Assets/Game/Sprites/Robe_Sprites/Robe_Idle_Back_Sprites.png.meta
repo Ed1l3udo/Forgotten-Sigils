@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: 46b9ff53d2b45504f9b507f7d2910273
+guid: e5a5f122a54b1bd4683fdcfd6bb76630
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 405129511402931395
-    second: Robe_Sprite_0
+      213: -7689439713919140179
+    second: Robe_Idle_Back_Sprites_0
+  - first:
+      213: -4920217762681738552
+    second: Robe_Idle_Back_Sprites_1
+  - first:
+      213: -6597783639078598950
+    second: Robe_Idle_Back_Sprites_2
+  - first:
+      213: 7281367934116437121
+    second: Robe_Idle_Back_Sprites_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +55,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -113,7 +122,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Robe_Sprite_0
+      name: Robe_Idle_Back_Sprites_0
       rect:
         serializedVersion: 2
         x: 3
@@ -121,15 +130,81 @@ TextureImporter:
         width: 24
         height: 29
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3c40337e42f4f9500800000000000000
-      internalID: 405129511402931395
+      spriteID: dae7112125f994590800000000000000
+      internalID: -7689439713919140179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robe_Idle_Back_Sprites_1
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 1
+        width: 24
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8caa9c56300e7bbb0800000000000000
+      internalID: -4920217762681738552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robe_Idle_Back_Sprites_2
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 1
+        width: 24
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad606df9cb6ff64a0800000000000000
+      internalID: -6597783639078598950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robe_Idle_Back_Sprites_3
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 1
+        width: 24
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18c1ee7ce8d9c0560800000000000000
+      internalID: 7281367934116437121
       vertices: []
       indices: 
       edges: []
@@ -138,7 +213,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: b65b5cbf14c426247a5b7d9428ace07b
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +223,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Robe_Sprite_0: 405129511402931395
+      Robe_Idle_Back_Sprites_0: -7689439713919140179
+      Robe_Idle_Back_Sprites_1: -4920217762681738552
+      Robe_Idle_Back_Sprites_2: -6597783639078598950
+      Robe_Idle_Back_Sprites_3: 7281367934116437121
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -23,6 +23,12 @@ public class PlayerMovement : MonoBehaviour
         if(movement.x != 0 || movement.y != 0) animator.SetBool("isWalking", true);
         else animator.SetBool("isWalking", false);
 
+        if(movement.y > 0) animator.SetBool("walkingUpwards", true);
+        else if(movement.y < 0) animator.SetBool("walkingUpwards", false);
+
+        if(movement.y < 0) animator.SetBool("walkingDownwards", true);
+        else if(movement.y > 0) animator.SetBool("walkingDownwards", false);
+
         transform.Translate(movement.normalized * moveSpeed * Time.deltaTime);
 
         // Condicional pra inverter o sprite

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
 public class UIButtonSound : MonoBehaviour, ISelectHandler, IPointerEnterHandler
@@ -7,7 +8,7 @@ public class UIButtonSound : MonoBehaviour, ISelectHandler, IPointerEnterHandler
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        if (audioController != null)
+        if (audioController != null && GetComponent<Slider>() == null)
         {
             audioController.PlaySelectionSound();
         }

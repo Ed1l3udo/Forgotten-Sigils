@@ -8,8 +8,9 @@ public class AudioController : MonoBehaviour
     [SerializeField] private AudioSource audioSourceMainTheme;
     [SerializeField] private AudioSource selectionSoundUiAudioSource;
     [SerializeField] private AudioClip selectionSoundClip; 
-    [SerializeField] private Slider musicVolumeSlider;
     [SerializeField] private Slider masterVolumeSlider;
+    [SerializeField] private Slider sfxVolumeSlider;
+    [SerializeField] private Slider musicVolumeSlider;
     void Start()
     {
         Load();
@@ -32,6 +33,13 @@ public class AudioController : MonoBehaviour
         PlayerPrefs.SetFloat("masterVolume", volume);
         PlayerPrefs.Save();
     }
+    public void SetSFXVolume(float volume)
+    {
+        float volumeInDb = Mathf.Log10(Mathf.Clamp(volume / 10f, 0.0001f, 1f)) * 20f;
+        audioMixer.SetFloat("SFXVolume", volumeInDb);
+        PlayerPrefs.SetFloat("sfxVolume", volume);
+        PlayerPrefs.Save();
+    }
 
     public void SetMusicVolume(float volume)
     {
@@ -43,15 +51,19 @@ public class AudioController : MonoBehaviour
 
     private void Load()
     {
-        //Master Volume
+        // Master Volume
         float savedMasterVolume = PlayerPrefs.GetFloat("masterVolume", 10f);
         float masterDb = Mathf.Log10(Mathf.Clamp(savedMasterVolume / 10f, 0.0001f, 1f)) * 20f;
         audioMixer.SetFloat("MasterVolume", masterDb);
         masterVolumeSlider.value = savedMasterVolume;
 
+        // SFX Volume
+        float savedSFXVolume = PlayerPrefs.GetFloat("sfxVolume", 10f);
+        float sfxDb = Mathf.Log10(Mathf.Clamp(savedSFXVolume / 10f, 0.0001f, 1f)) * 20f;
+        audioMixer.SetFloat("SFXVolume", sfxDb);
+        sfxVolumeSlider.value = savedSFXVolume;
 
-
-        //Music Volume
+        // Music Volume
         float savedMusicVolume = PlayerPrefs.GetFloat("musicVolume", 10f);
         float volumeInDb = Mathf.Log10(Mathf.Clamp(savedMusicVolume / 10f, 0.0001f, 1f)) * 20f;
         audioMixer.SetFloat("MusicVolume", volumeInDb);

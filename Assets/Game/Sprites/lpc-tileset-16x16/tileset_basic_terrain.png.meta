@@ -672,7 +672,29 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      tileset_basic_terrain_0: -8962527901448496191
+      tileset_basic_terrain_1: 5634787087070781501
+      tileset_basic_terrain_10: -1653593305831585931
+      tileset_basic_terrain_11: -752714871184645460
+      tileset_basic_terrain_12: 7203216417864204421
+      tileset_basic_terrain_13: 5841690906776886815
+      tileset_basic_terrain_14: 5691855146664577456
+      tileset_basic_terrain_15: 2257444810784731229
+      tileset_basic_terrain_16: -8081813491504369147
+      tileset_basic_terrain_17: -4562520209944384814
+      tileset_basic_terrain_18: 3415321864044779914
+      tileset_basic_terrain_19: -1960089825200715148
+      tileset_basic_terrain_2: 2130704437460187890
+      tileset_basic_terrain_20: -4315248192018225073
+      tileset_basic_terrain_21: -2468831777275176050
+      tileset_basic_terrain_3: 6630591646528959698
+      tileset_basic_terrain_4: 2905104715629292754
+      tileset_basic_terrain_5: -3486150834051104465
+      tileset_basic_terrain_6: -3171567878780330983
+      tileset_basic_terrain_7: 361100761688130878
+      tileset_basic_terrain_8: 8058246179886966941
+      tileset_basic_terrain_9: 3582109135050261117
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

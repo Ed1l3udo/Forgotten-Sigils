@@ -1197,7 +1197,50 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      tileset_other_0: 2851335616957291412
+      tileset_other_1: -4936769201859844814
+      tileset_other_10: 3942305128116820059
+      tileset_other_11: -269124913990610614
+      tileset_other_12: 1338258054352075241
+      tileset_other_13: -4994859449127930753
+      tileset_other_14: -7125115741272250435
+      tileset_other_15: 1463002284872640785
+      tileset_other_16: 1274977374332178450
+      tileset_other_17: -1232096927814639851
+      tileset_other_18: 3132819741256956191
+      tileset_other_19: -2855468717599768050
+      tileset_other_2: -8766709147104966549
+      tileset_other_20: -5573553067580372353
+      tileset_other_21: -7288873618748036060
+      tileset_other_22: 4756678908075596578
+      tileset_other_23: 8546224714565555203
+      tileset_other_24: -2572439950740796821
+      tileset_other_25: -5775569892321478527
+      tileset_other_26: -4894824213864865364
+      tileset_other_27: 7278537828343548191
+      tileset_other_28: 110999861323840961
+      tileset_other_29: -4197463443333921785
+      tileset_other_3: -4077108984959107464
+      tileset_other_30: -8674066099927378621
+      tileset_other_31: -167112866106124723
+      tileset_other_32: -5410053625140593927
+      tileset_other_33: 1695747751896617646
+      tileset_other_34: 1630264216372953366
+      tileset_other_35: 3385968806810258994
+      tileset_other_36: -8339364719781810446
+      tileset_other_37: 4151224445219127861
+      tileset_other_38: -6287490806198018723
+      tileset_other_39: 6619080323222460849
+      tileset_other_4: 5777000063971353594
+      tileset_other_40: 5498811508919938844
+      tileset_other_41: -5450047310134625080
+      tileset_other_42: 1384584703846265244
+      tileset_other_5: 7410833602810708939
+      tileset_other_6: 3451827102591492405
+      tileset_other_7: -5277005533778671152
+      tileset_other_8: 4521774482210246644
+      tileset_other_9: 34601909133272416
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

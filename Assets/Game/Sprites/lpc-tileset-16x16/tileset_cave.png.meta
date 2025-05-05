@@ -1047,7 +1047,44 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      tileset_cave_0: 6967295529819395220
+      tileset_cave_1: 3545170442970991799
+      tileset_cave_10: 5767754505704136104
+      tileset_cave_11: -4993370357982456961
+      tileset_cave_12: 4051760148980809358
+      tileset_cave_13: -1116610654927078313
+      tileset_cave_14: -6805488942481396839
+      tileset_cave_15: 3633024301273822125
+      tileset_cave_16: -77738541930386487
+      tileset_cave_17: -260537191805207199
+      tileset_cave_18: -8912050189212371225
+      tileset_cave_19: -2422893645132197320
+      tileset_cave_2: 2606601763285814514
+      tileset_cave_20: -8490190422809894861
+      tileset_cave_21: -6911397475712017393
+      tileset_cave_22: -4093729047009051147
+      tileset_cave_23: -3923261275379136108
+      tileset_cave_24: -6928953891179497220
+      tileset_cave_25: -4851588875315118606
+      tileset_cave_26: 2938086652682100021
+      tileset_cave_27: -2265224963660592334
+      tileset_cave_28: 2396304263629583273
+      tileset_cave_29: 6588661253311684776
+      tileset_cave_3: 3740841909392188768
+      tileset_cave_30: 6423637992343753308
+      tileset_cave_31: 6446522700576142032
+      tileset_cave_32: -776550990940494004
+      tileset_cave_33: -2531370606163173448
+      tileset_cave_34: -3679646243590372035
+      tileset_cave_35: -1388993286219459594
+      tileset_cave_36: 6688736406213831054
+      tileset_cave_4: 5899734803837857830
+      tileset_cave_5: 6352932866398342595
+      tileset_cave_6: 2957027488497514308
+      tileset_cave_7: -4044558100333355495
+      tileset_cave_8: -4476081951279554184
+      tileset_cave_9: 4530067417094974071
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

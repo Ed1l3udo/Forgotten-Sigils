@@ -1847,7 +1847,76 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      tileset_water_0: 6212381585193645058
+      tileset_water_1: -2849483078942533492
+      tileset_water_10: -5922472642197577238
+      tileset_water_11: -1796740604080051905
+      tileset_water_12: -2359644979168629609
+      tileset_water_13: 1058989024326255229
+      tileset_water_14: 7622131873432975025
+      tileset_water_15: 5332012919309771286
+      tileset_water_16: -4279514329168397937
+      tileset_water_17: 2673660917053449823
+      tileset_water_18: -65392707464061330
+      tileset_water_19: -3283983894602939014
+      tileset_water_2: -4991012069156012605
+      tileset_water_20: 4881996083237768306
+      tileset_water_21: -3884069862931183045
+      tileset_water_22: 748117631022405298
+      tileset_water_23: -6694266793864424991
+      tileset_water_24: -5133456597557902306
+      tileset_water_25: 3251950120385249808
+      tileset_water_26: -1947908338479656439
+      tileset_water_27: -7931329982356461466
+      tileset_water_28: 1026443979702358718
+      tileset_water_29: -4848398805058072275
+      tileset_water_3: 8744787847154240055
+      tileset_water_30: -7932720650664448644
+      tileset_water_31: -5295757645260394920
+      tileset_water_32: -8953128216289727291
+      tileset_water_33: -2525408211466185923
+      tileset_water_34: 7145645139668364415
+      tileset_water_35: 1122461864430010379
+      tileset_water_36: 8745063264601341443
+      tileset_water_37: -7281203746716518267
+      tileset_water_38: 8815368742367732879
+      tileset_water_39: -2017646560735624359
+      tileset_water_4: 8567607203977716931
+      tileset_water_40: -285583349579878724
+      tileset_water_41: -2304641612027262800
+      tileset_water_42: 256235112937811690
+      tileset_water_43: -6300496203024663674
+      tileset_water_44: 812804801222644245
+      tileset_water_45: -1061801768919188642
+      tileset_water_46: 3248855200325343046
+      tileset_water_47: -6900404336590813669
+      tileset_water_48: 4258331849639430447
+      tileset_water_49: 5599542869999788737
+      tileset_water_5: -4747541385887352279
+      tileset_water_50: 4188876869932346364
+      tileset_water_51: 8724224627021068637
+      tileset_water_52: 2374970012344516892
+      tileset_water_53: 5126781178584754480
+      tileset_water_54: -3614779870784147697
+      tileset_water_55: 8755649995355669376
+      tileset_water_56: 7290320703618757470
+      tileset_water_57: 559120608937014290
+      tileset_water_58: -2455472286449233575
+      tileset_water_59: 89211703531789234
+      tileset_water_6: -6219651568173029340
+      tileset_water_60: -6259569062126970146
+      tileset_water_61: 4670655954445189242
+      tileset_water_62: 5003659304234689570
+      tileset_water_63: 9141749185098609113
+      tileset_water_64: -7886223669701242504
+      tileset_water_65: -6866749895663378105
+      tileset_water_66: 2978544618975560456
+      tileset_water_67: 5506385084921003615
+      tileset_water_68: -4558858437985357558
+      tileset_water_7: 2296952446132525238
+      tileset_water_8: -9197713651763649745
+      tileset_water_9: 2180801383353423231
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

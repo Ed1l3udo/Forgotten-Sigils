@@ -6,6 +6,7 @@ public class LifeUI : MonoBehaviour
 
     [SerializeField] private Image[] hearts;
     [SerializeField] private Sprite fullHeart;
+    [SerializeField] private Sprite halfHeart;
     [SerializeField] private Sprite hollowHeart;
     [SerializeField] private int maxLife;
 
@@ -33,15 +34,22 @@ public class LifeUI : MonoBehaviour
 
     void UpdateUI()
     {
-        for(int i = 0; i < hearts.Length; i++)
+        for(int i = 1; i < hearts.Length * 2; i+=2)
         {
             if(i < currentLife)
             {
-                hearts[i].sprite = fullHeart;
+                hearts[i/2].sprite = fullHeart;
             }
             else
             {
-                hearts[i].sprite = hollowHeart;
+                if(i-1 < currentLife)
+                {
+                    hearts[i/2].sprite = halfHeart;
+                }
+                else
+                {
+                    hearts[i/2].sprite = hollowHeart;
+                }
             }
         }
     }

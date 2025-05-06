@@ -17,7 +17,11 @@ public class EnemyController : MonoBehaviour
     {
         if(other.CompareTag("Player"))
         {
-            
+            PlayerHealth player = other.GetComponent<PlayerHealth>();
+            if(player != null)
+            {
+                player.TakeDamage(1);
+            }
             Debug.Log("Encostou no jogador");
         }
     }

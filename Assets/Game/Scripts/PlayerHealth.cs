@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -11,9 +12,9 @@ public class PlayerHealth : MonoBehaviour
         HealthPanel.UpdateUI(currentHealth);
     }
 
-    public void TakeDamage(int dano)
+    public void TakeDamage(int damage)
     {
-        currentHealth -= dano;
+        currentHealth -= damage;
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth); // doesn't let currentHealth go beyond 0 or maxHealth
         HealthPanel.UpdateUI(currentHealth);
     }

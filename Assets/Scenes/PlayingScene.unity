@@ -178,7 +178,7 @@ GameObject:
   - component: {fileID: 130498840}
   - component: {fileID: 130498841}
   m_Layer: 0
-  m_Name: Triangle
+  m_Name: Encosto
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37869,8 +37869,8 @@ Tilemap:
   - first: {x: 2, y: 1, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 9
-      m_TileSpriteIndex: 9
+      m_TileIndex: 10
+      m_TileSpriteIndex: 10
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -38376,8 +38376,10 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 788afaf350683444b881f3c7669ae1f9, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: a69ed74fe42254149b939dce13b68bad, type: 2}
-  - m_RefCount: 2
-    m_Data: {fileID: 11400000, guid: bc0581efd8d1714449d20f2efecf0f48, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 05bf3b41489a7a34cb4807b15d612703, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 9fa66b874a0bf8e4c97a6b104ff197ec, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 2
     m_Data: {fileID: -870270193, guid: ad99e3ef9fe669f478c6de9bfe213a18, type: 3}
@@ -38397,8 +38399,10 @@ Tilemap:
     m_Data: {fileID: -1901272823, guid: ad99e3ef9fe669f478c6de9bfe213a18, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: -926441550, guid: ad99e3ef9fe669f478c6de9bfe213a18, type: 3}
-  - m_RefCount: 2
-    m_Data: {fileID: -2671460228953875570, guid: ad99e3ef9fe669f478c6de9bfe213a18, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: -246274360, guid: ad99e3ef9fe669f478c6de9bfe213a18, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 1337188232, guid: ad99e3ef9fe669f478c6de9bfe213a18, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 130
     m_Data:

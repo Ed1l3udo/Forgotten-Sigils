@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    private Camera mainCamera;
     private Animator animator;
     private Rigidbody2D rb;
     public float moveSpeed = 5f;
@@ -11,6 +12,8 @@ public class PlayerMovement : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        mainCamera = Camera.main;
+
     }
 
     void Update()
@@ -21,13 +24,15 @@ public class PlayerMovement : MonoBehaviour
         movement.y = Input.GetAxisRaw("Vertical"); // Pega a entrada W/S e retorna 1 (W) -1 (S) ou 0 (nada)
 
         animator.SetBool("isWalking", movement != Vector2.zero);
-        animator.SetBool("walkingUpwards", movement.y > 0);
-        animator.SetBool("walkingDownwards", movement.y < 0);
+
+        Vector3 mouseWorldPos = mainCamera.ScreenToWorldPoint(Input.mousePosition);
+        Vector3 directionToMouse = mouseWorldPos - transform.position;
+        animator.SetBool("lookingUp", directionToMouse.y > 0);
 
         // Condicional pra inverter o sprite
         Vector3 scale = transform.localScale;
-        if (movement.x > 0) scale.x = Mathf.Abs(scale.x);
-        else if (movement.x < 0) scale.x = -Mathf.Abs(scale.x);
+        if (directionToMouse.x >= 0) scale.x = Mathf.Abs(scale.x);
+        else if (directionToMouse.x < 0) scale.x = -Mathf.Abs(scale.x);
         transform.localScale = scale;
         
     }

@@ -12,6 +12,9 @@ public class EnemyAI : MonoBehaviour
     private Vector3 invertedScale;
     private int currentWayPoint = 0;
     private bool reachedEndOfPath = false;
+    private Vector3 enemyMovementDirection;
+    private Vector3 enemyMovementForce;
+
     private Seeker seeker;
     private Rigidbody2D rb;
 
@@ -25,6 +28,38 @@ public class EnemyAI : MonoBehaviour
         InvokeRepeating("UpdatePath", 0f, .5f); //(function to repeat, instant of the first call, repeating rate)
     } 
 
+    void FixedUpdate()
+    {
+        PahthHandler();
+        AdjustSprite();
+    }
+
+    void PahthHandler()
+    {
+        if(path == null)
+        {
+            return;
+        }
+
+        if(currentWayPoint >= path.vectorPath.Count)
+        {
+            reachedEndOfPath = true;
+            return;
+        }
+        else
+        {
+            reachedEndOfPath = false;
+        }
+        
+        MoveEnemy();
+
+        float distance = Vector2.Distance(rb.position, path.vectorPath[currentWayPoint]);
+
+        if(distance < nextWayPointDistance)
+        {
+            currentWayPoint++;
+        }
+    }
     void UpdatePath()
     {
         if(seeker.IsDone())
@@ -43,43 +78,23 @@ public class EnemyAI : MonoBehaviour
     }
 
 
-    void FixedUpdate()
+
+    void AdjustSprite()
     {
-        if(path == null)
-        {
-            return;
-        }
-        if(currentWayPoint >= path.vectorPath.Count)
-        {
-            reachedEndOfPath = true;
-            return;
-        }
-        else
-        {
-            reachedEndOfPath = false;
-        }
-
-        Vector2 direction = ((Vector2)path.vectorPath[currentWayPoint] - rb.position).normalized;
-        Vector2 force = direction * speed * Time.deltaTime;
-        rb.AddForce(force);
-
-        float distance = Vector2.Distance(rb.position, path.vectorPath[currentWayPoint]);
-
-        if(distance < nextWayPointDistance)
-        {
-            currentWayPoint++;
-        }
-
-
-
-        if(force.x >= 0.01f)
+        if(enemyMovementForce.x >= 0.01f)
         {
             enemyGFX.localScale = standardScale;
         }
-        else if(force.x <= -0.01f)
+        else if(enemyMovementForce.x <= -0.01f)
         {
             enemyGFX.localScale = invertedScale;
-        }
+        }    
+    }
 
+    void MoveEnemy()
+    {
+        enemyMovementDirection = ((Vector2)path.vectorPath[currentWayPoint] - rb.position).normalized;
+        enemyMovementForce = enemyMovementDirection * speed * Time.deltaTime;
+        rb.AddForce(enemyMovementForce);
     }
 }

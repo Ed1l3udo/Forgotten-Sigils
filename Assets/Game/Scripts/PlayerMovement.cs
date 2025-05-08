@@ -1,4 +1,6 @@
+using System.Collections;
 using UnityEngine;
+
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -8,6 +10,12 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed = 5f;
     private Vector2 movement;
     public bool canMove = true;
+
+    private bool canDash = true;
+    private bool isDashing;
+    private float dashPower = 24f;
+    private float dashTime = 0.2f;
+    private float dashCooldown = 1f;
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -18,7 +26,12 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-    
+        
+        if(isDashing)
+        {
+            return;
+        }
+
         // Entrada do jogador (WASD ou setas)
         movement.x = Input.GetAxisRaw("Horizontal"); // Pega a entrada A/D e retorna 1(D) -1(A) ou 0 (nada) 
         movement.y = Input.GetAxisRaw("Vertical"); // Pega a entrada W/S e retorna 1 (W) -1 (S) ou 0 (nada)
@@ -34,12 +47,33 @@ public class PlayerMovement : MonoBehaviour
         if (directionToMouse.x >= 0) scale.x = Mathf.Abs(scale.x);
         else if (directionToMouse.x < 0) scale.x = -Mathf.Abs(scale.x);
         transform.localScale = scale;
+
+        if(Input.GetKeyDown(KeyCode.LeftShift) && canDash)
+        {
+            StartCoroutine(Dash());
+        }
         
     }
 
     void FixedUpdate()
     {
+        if(isDashing)
+        {
+            return;
+        }
         rb.linearVelocity = movement.normalized * moveSpeed;
+    }
+
+    private IEnumerator Dash()
+    {
+        Debug.Log("Dashing");
+        canDash = false;
+        isDashing = true;
+        rb.linearVelocity = movement.normalized * dashPower;
+        yield return new WaitForSeconds(dashTime);
+        isDashing = false;
+        yield return new WaitForSeconds(dashCooldown);
+        canDash = true;
     }
 
 }

@@ -38727,7 +38727,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f83d81e94f915f144aa493e9e3d99f13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  playerMoveSpeed: 5
   canMove: 1
 --- !u!50 &1373273239
 Rigidbody2D:

@@ -25,4 +25,8 @@ public class PlayerMana : MonoBehaviour
         currentMana = Mathf.Clamp(currentMana, 0, maxMana);
         manaPanel.UpdateUI(currentMana);
     }
+
+    public bool TemMana(int amount){
+        return currentMana >= amount;
+    }
 }

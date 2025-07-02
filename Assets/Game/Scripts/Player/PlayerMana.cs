@@ -4,6 +4,8 @@ public class PlayerMana : MonoBehaviour
 {
     [SerializeField] private ManaUI manaPanel;
     [SerializeField] private int maxMana = 10;
+    [SerializeField] public float manaRegenRate = 5f;
+    private float manaRegenTimer = 0f;
     private int currentMana;
 
     void Start()
@@ -11,6 +13,26 @@ public class PlayerMana : MonoBehaviour
         currentMana = maxMana;
         manaPanel.UpdateUI(currentMana);
     }
+
+    void RegenerateMana(){
+
+    if (currentMana < maxMana){
+        manaRegenTimer += manaRegenRate * Time.deltaTime;
+
+        if (manaRegenTimer >= 1f)
+        {
+            int manaToAdd = Mathf.FloorToInt(manaRegenTimer);
+            currentMana = Mathf.Min(currentMana + manaToAdd, maxMana);
+            manaRegenTimer -= manaToAdd;
+            manaPanel.UpdateUI(currentMana);
+        }
+    }
+    
+    else{
+        manaRegenTimer = 0f;
+    }
+}
+
 
     public void UseMana(int amount)
     {
@@ -29,4 +51,9 @@ public class PlayerMana : MonoBehaviour
     public bool TemMana(int amount){
         return currentMana >= amount;
     }
+
+    void Update(){
+        RegenerateMana();
+    }
+
 }

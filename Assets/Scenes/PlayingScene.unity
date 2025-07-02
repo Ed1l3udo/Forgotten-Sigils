@@ -39277,6 +39277,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   manaPanel: {fileID: 1333168371}
   maxMana: 10
+  manaRegenRate: 2
 --- !u!114 &1373273247
 MonoBehaviour:
   m_ObjectHideFlags: 0

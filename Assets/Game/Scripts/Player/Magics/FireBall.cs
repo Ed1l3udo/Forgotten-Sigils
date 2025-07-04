@@ -11,8 +11,7 @@ public class FireBall : BaseMagic
         fireballPrefab = prefab;
     }
 
-    public override void Cast(Transform caster, Vector3 targetPosition)
-    {
+    public override void Cast(Transform caster, Vector3 targetPosition){
         Vector3 direction = (targetPosition - caster.position).normalized;
 
         GameObject fireball = Object.Instantiate(fireballPrefab, caster.position + (direction * 2f), Quaternion.identity);

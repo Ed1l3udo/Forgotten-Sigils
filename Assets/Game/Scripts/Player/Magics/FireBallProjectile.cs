@@ -3,6 +3,7 @@ using UnityEngine;
 public class FireBallProjectile : MonoBehaviour
 {
     public float lifetime = 20f;
+    public int dano = 10;
 
     void Start()
     {
@@ -12,6 +13,11 @@ public class FireBallProjectile : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        // Tenta encontrar um componente-alvo que implemente IDamageable
+        IDamageable alvo = collision.gameObject.GetComponent<IDamageable>();
+
+        if(alvo != null) alvo.TakeDamage(dano);
+
         // Destroi ao colidir com qualquer coisa
         Destroy(gameObject);
     }

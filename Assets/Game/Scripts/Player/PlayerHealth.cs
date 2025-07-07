@@ -17,6 +17,8 @@ public class PlayerHealth : MonoBehaviour
         currentHealth -= damage;
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth); // doesn't let currentHealth go beyond 0 or maxHealth
         HealthPanel.UpdateUI(currentHealth);
+
+        if(currentHealth == 0) Die();
     }
 
     public void Heal(int healing)
@@ -24,5 +26,10 @@ public class PlayerHealth : MonoBehaviour
         currentHealth += healing;
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth); // doesn't let currentHealth go beyond 0 or maxHealth
         HealthPanel.UpdateUI(currentHealth);
+    }
+
+    public void Die()
+    {
+        // a ser implementado
     }
 }

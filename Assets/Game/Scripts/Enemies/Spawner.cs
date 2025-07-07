@@ -15,6 +15,9 @@ public class Spawner : MonoBehaviour
     public float tempoMinEntreSpawns = 3f;
     public float tempoMaxEntreSpawns = 8f;
     public int maxMonstrosVivos = 10;
+    public float distanciaMinima = 15f;
+
+    private Vector2 areaMinima;
 
     private List<GameObject> monstrosVivos = new List<GameObject>();
 
@@ -44,11 +47,13 @@ public class Spawner : MonoBehaviour
 
     void SpawnSlime()
     {
-        // Remove monstros destruídos da lista
+        float distanciaDoPlayer = Vector2.Distance(transform.position, player.transform.position);
+        
+        if (distanciaDoPlayer > distanciaMinima) return;
+
         monstrosVivos.RemoveAll(monster => monster == null);
 
-        if (monstrosVivos.Count >= maxMonstrosVivos
-)
+        if (monstrosVivos.Count >= maxMonstrosVivos)
             return;
 
         Vector2 spawnPosition = (Vector2)transform.position + new Vector2(
@@ -66,7 +71,11 @@ public class Spawner : MonoBehaviour
 
     private void OnDrawGizmosSelected()
     {
-        Gizmos.color = Color.green;
-        Gizmos.DrawWireCube(transform.position, areaSize);
+    Gizmos.color = Color.green;
+    Gizmos.DrawWireCube(transform.position, areaSize);
+
+    Gizmos.color = Color.red;
+    Gizmos.DrawWireCube(transform.position, new Vector3(distanciaMinima, distanciaMinima, 0f));
     }
+
 }

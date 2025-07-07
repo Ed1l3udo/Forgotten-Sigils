@@ -2,10 +2,10 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-public class SlimeSpawner : MonoBehaviour
+public class Spawner : MonoBehaviour
 {
-    [Header("Prefab do Slime")]
-    public GameObject slimePrefab;
+    [Header("Prefab do Monstro")]
+    public GameObject monsterPrefab;
 
     [Header("Configuração da Área de Spawn")]
     public Vector2 areaSize = new Vector2(10f, 10f);
@@ -14,9 +14,9 @@ public class SlimeSpawner : MonoBehaviour
     public int quantidadeInicial = 5;
     public float tempoMinEntreSpawns = 3f;
     public float tempoMaxEntreSpawns = 8f;
-    public int maxSlimesVivos = 10;
+    public int maxMonstrosVivos = 10;
 
-    private List<GameObject> slimesVivos = new List<GameObject>();
+    private List<GameObject> monstrosVivos = new List<GameObject>();
 
     public GameObject player;
 
@@ -44,10 +44,11 @@ public class SlimeSpawner : MonoBehaviour
 
     void SpawnSlime()
     {
-        // Remove slimes destruídos da lista
-        slimesVivos.RemoveAll(slime => slime == null);
+        // Remove monstros destruídos da lista
+        monstrosVivos.RemoveAll(monster => monster == null);
 
-        if (slimesVivos.Count >= maxSlimesVivos)
+        if (monstrosVivos.Count >= maxMonstrosVivos
+)
             return;
 
         Vector2 spawnPosition = (Vector2)transform.position + new Vector2(
@@ -55,12 +56,12 @@ public class SlimeSpawner : MonoBehaviour
             Random.Range(-areaSize.y / 2, areaSize.y / 2)
         );
 
-        GameObject novoSlime = Instantiate(slimePrefab, spawnPosition, Quaternion.identity);
+        GameObject novoMonstro = Instantiate(monsterPrefab, spawnPosition, Quaternion.identity);
 
-        EnemyAI enemyAI = novoSlime.GetComponent<EnemyAI>();
+        EnemyAI enemyAI = novoMonstro.GetComponent<EnemyAI>();
         enemyAI.target = player.transform;
 
-        slimesVivos.Add(novoSlime);
+        monstrosVivos.Add(novoMonstro);
     }
 
     private void OnDrawGizmosSelected()

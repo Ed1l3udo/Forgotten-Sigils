@@ -103,12 +103,12 @@ TextureImporter:
       name: ManaBar27_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 7
         y: 0
-        width: 64
-        height: 16
+        width: 2
+        height: 3
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -121,11 +121,99 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: ManaBar27_1
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 0
+        width: 2
+        height: 3
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bd57394237fc004f83be6577efbac6f
+      internalID: 2049836613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManaBar27_2
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 0
+        width: 2
+        height: 3
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 469134d4c89b9f04182feb79a931b7e5
+      internalID: -13049345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManaBar27_3
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 0
+        width: 2
+        height: 3
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f86052a0444f174f82b38a203acdd0d
+      internalID: 137505305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManaBar27_4
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 6
+        width: 54
+        height: 3
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f23a0538a2d0cbc41a02739257e1aa3c
+      internalID: 843530865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 647fbd91a4ef0a04695ef3096b67af2b
     internalID: 0
     vertices: []
     indices: 
@@ -136,6 +224,10 @@ TextureImporter:
       entries: []
     nameFileIdTable:
       ManaBar27_0: 8342652094213158911
+      ManaBar27_1: 2049836613
+      ManaBar27_2: -13049345
+      ManaBar27_3: 137505305
+      ManaBar27_4: 843530865
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

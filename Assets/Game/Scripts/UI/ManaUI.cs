@@ -3,30 +3,36 @@ using UnityEngine.UI;
 
 public class ManaUI : MonoBehaviour
 {
-    [SerializeField] private Image[] orbs;
-    [SerializeField] private Sprite fullOrb;
-    [SerializeField] private Sprite halfOrb;
-    [SerializeField] private Sprite emptyOrb;
+    [SerializeField] private Image[] manaBar;
+    [SerializeField] private Sprite startSprite;
+    [SerializeField] private Sprite middle1;
+    [SerializeField] private Sprite middle2;
+    [SerializeField] private Sprite finishSprite;
+
+    private void UpdateManaBar(bool show, int index){
+        if (index < 0 || index >= manaBar.Length) return;
+
+        if (show)
+        {
+            if (index == 0) manaBar[index].sprite = startSprite;
+            else if (index == manaBar.Length - 1) manaBar[index].sprite = finishSprite;
+            else if (index % 2 == 0) manaBar[index].sprite = middle1;
+            else manaBar[index].sprite = middle2;
+        }
+        else
+        {
+            manaBar[index].sprite = null; 
+        }
+    }
 
     public void UpdateUI(int currentMana)
     {
-        for (int i = 1; i < orbs.Length * 2; i += 2)
+        for (int i = 1; i < manaBar.Length; ++i)
         {
-            if (i < currentMana)
-            {
-                orbs[i / 2].sprite = fullOrb;
-            }
-            else
-            {
-                if (i - 1 < currentMana)
-                {
-                    orbs[i / 2].sprite = halfOrb;
-                }
-                else
-                {
-                    orbs[i / 2].sprite = emptyOrb;
-                }
-            }
+            bool show = (currentMana > 0);
+            UpdateManaBar(show, i);
+
+            currentMana--;
         }
     }
 }

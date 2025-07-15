@@ -3,6 +3,7 @@ using Pathfinding;
 
 public class EnemyAI : MonoBehaviour
 {
+    public GameObject playerGameObject;
     public Transform target;    
     public Transform enemyGFX;
     public float speed = 300f;
@@ -20,6 +21,16 @@ public class EnemyAI : MonoBehaviour
 
     void Start()
     {
+        if (playerGameObject != null)
+        {
+            target = playerGameObject.transform;
+        }
+        else
+        {
+            GameObject p = GameObject.FindGameObjectWithTag("Player");
+            if (p != null) target = p.transform;
+        }
+
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
         standardScale = enemyGFX.localScale;

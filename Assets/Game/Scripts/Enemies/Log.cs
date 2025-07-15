@@ -21,7 +21,17 @@ public class Log : MonoBehaviour, IDamageable
     {
         currentHealth = maxHealth;
 
-        player = playerGameObject.transform;
+        if (playerGameObject != null)
+        {
+            player = playerGameObject.transform;
+        }
+        else
+        {
+            GameObject p = GameObject.FindGameObjectWithTag("Player");
+            if (p != null) player = p.transform;
+            else Debug.Log("Não foi possível achar o player!");
+        }
+
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
 

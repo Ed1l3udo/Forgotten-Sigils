@@ -63,11 +63,6 @@ public class Spawner : MonoBehaviour
 
         GameObject novoMonstro = Instantiate(monsterPrefab, spawnPosition, Quaternion.identity);
 
-        if(novoMonstro.GetComponent<EnemyAI>() != null){
-            EnemyAI enemyAI = novoMonstro.GetComponent<EnemyAI>();
-            enemyAI.target = player.transform;
-        }
-
         monstrosVivos.Add(novoMonstro);
     }
 

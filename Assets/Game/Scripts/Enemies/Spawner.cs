@@ -28,7 +28,7 @@ public class Spawner : MonoBehaviour
         // Spawn inicial
         for (int i = 0; i < quantidadeInicial; i++)
         {
-            SpawnSlime();
+            SpawnMonster();
         }
 
         // Inicia spawn contínuo com tempo aleatório
@@ -41,11 +41,11 @@ public class Spawner : MonoBehaviour
         {
             float tempoEspera = Random.Range(tempoMinEntreSpawns, tempoMaxEntreSpawns);
             yield return new WaitForSeconds(tempoEspera);
-            SpawnSlime();
+            SpawnMonster();
         }
     }
 
-    void SpawnSlime()
+    void SpawnMonster()
     {
         float distanciaDoPlayer = Vector2.Distance(transform.position, player.transform.position);
         
@@ -63,19 +63,21 @@ public class Spawner : MonoBehaviour
 
         GameObject novoMonstro = Instantiate(monsterPrefab, spawnPosition, Quaternion.identity);
 
-        EnemyAI enemyAI = novoMonstro.GetComponent<EnemyAI>();
-        enemyAI.target = player.transform;
+        if(novoMonstro.GetComponent<EnemyAI>() != null){
+            EnemyAI enemyAI = novoMonstro.GetComponent<EnemyAI>();
+            enemyAI.target = player.transform;
+        }
 
         monstrosVivos.Add(novoMonstro);
     }
 
     private void OnDrawGizmosSelected()
     {
-    Gizmos.color = Color.green;
-    Gizmos.DrawWireCube(transform.position, areaSize);
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireCube(transform.position, areaSize);
 
-    Gizmos.color = Color.red;
-    Gizmos.DrawWireCube(transform.position, new Vector3(distanciaMinima, distanciaMinima, 0f));
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireCube(transform.position, new Vector3(distanciaMinima, distanciaMinima, 0f));
     }
 
 }

@@ -8,6 +8,7 @@ public class ManaUI : MonoBehaviour
     [SerializeField] private Sprite middle1;
     [SerializeField] private Sprite middle2;
     [SerializeField] private Sprite finishSprite;
+    [SerializeField] private Sprite empty;
 
     private void UpdateManaBar(bool show, int index){
         if (index < 0 || index >= manaBar.Length) return;
@@ -21,13 +22,13 @@ public class ManaUI : MonoBehaviour
         }
         else
         {
-            manaBar[index].sprite = null; 
+            manaBar[index].sprite = empty; 
         }
     }
 
     public void UpdateUI(int currentMana)
     {
-        for (int i = 1; i < manaBar.Length; ++i)
+        for (int i = 0; i < manaBar.Length; ++i)
         {
             bool show = (currentMana > 0);
             UpdateManaBar(show, i);

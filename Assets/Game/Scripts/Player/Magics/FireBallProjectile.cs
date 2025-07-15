@@ -13,8 +13,8 @@ public class FireBallProjectile : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        // Tenta encontrar um componente-alvo que implemente IDamageable
-        IDamageable alvo = collision.gameObject.GetComponent<IDamageable>();
+        // Tenta encontrar um componente-alvo que implemente Damageable
+        Damageable alvo = collision.gameObject.GetComponent<Damageable>();
 
         if(alvo != null) alvo.TakeDamage(dano);
 

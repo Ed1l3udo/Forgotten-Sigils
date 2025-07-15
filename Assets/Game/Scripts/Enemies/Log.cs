@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class Log : MonoBehaviour, IDamageable
+public class Log : Damageable
 {
     public GameObject playerGameObject;
     private Transform player;
@@ -19,6 +19,7 @@ public class Log : MonoBehaviour, IDamageable
 
     void Start()
     {
+        base.Start();
         currentHealth = maxHealth;
 
         if (playerGameObject != null)
@@ -69,14 +70,10 @@ public class Log : MonoBehaviour, IDamageable
         }
     }
 
-    public void TakeDamage(int damage){
+    public override void TakeDamage(int damage){
         currentHealth -= damage;
         
         if(currentHealth <= 0) Die();
-    }
-
-    void Die(){
-        Destroy(gameObject);
     }
 
     IEnumerator BehaviorRoutine()

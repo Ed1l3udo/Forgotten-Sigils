@@ -9,10 +9,12 @@ public class GameManager : MonoBehaviour
     public int playerCurrentHealth;
     public int playerMaxMana = 27;
     public int playerCurrentMana;
-    public Vector3 playerPosition;
+    [SerializeField] public Vector3 playerPosition;
 
     void Awake()
     {
+        playerPosition = new Vector3(0f, 0f, 0f);
+        
         // Implementação do Singleton
         if (Instance == null)
         {

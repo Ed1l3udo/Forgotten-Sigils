@@ -2543,7 +2543,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputController: {fileID: 1450034926}
   defaultSelected: {fileID: 936728032}
-  playingScene: PlayingScene
+  playingScene: StartingArea
   mainMenuPanel: {fileID: 954912921}
   settingsMenuPanel: {fileID: 1354665502}
   volumeSlider: {fileID: 686360319}

@@ -3,34 +3,40 @@ using UnityEngine;
 public class PlayerMana : MonoBehaviour
 {
     [SerializeField] private ManaUI manaPanel;
-    [SerializeField] private int maxMana = 10;
+    private int maxMana = 10;
     [SerializeField] public float manaRegenRate = 5f;
     private float manaRegenTimer = 0f;
     private int currentMana;
 
     void Start()
     {
-        currentMana = maxMana;
-        manaPanel.UpdateUI(currentMana);
+        currentMana = GameManager.Instance.playerCurrentMana;
+        maxMana = GameManager.Instance.playerMaxMana;
+
+        manaPanel = FindObjectOfType<ManaUI>();
+
+        if(manaPanel != null) manaPanel.UpdateUI(currentMana);
     }
 
     void RegenerateMana(){
+        if (currentMana < maxMana){
+            manaRegenTimer += manaRegenRate * Time.deltaTime;
 
-    if (currentMana < maxMana){
-        manaRegenTimer += manaRegenRate * Time.deltaTime;
+            if (manaRegenTimer >= 1f)
+            {
+                int manaToAdd = Mathf.FloorToInt(manaRegenTimer);
+                
+                currentMana = Mathf.Min(currentMana + manaToAdd, maxMana);
+                GameManager.Instance.playerCurrentMana = currentMana;
 
-        if (manaRegenTimer >= 1f)
-        {
-            int manaToAdd = Mathf.FloorToInt(manaRegenTimer);
-            currentMana = Mathf.Min(currentMana + manaToAdd, maxMana);
-            manaRegenTimer -= manaToAdd;
-            manaPanel.UpdateUI(currentMana);
+                manaRegenTimer -= manaToAdd;
+                manaPanel.UpdateUI(currentMana);
+            }
         }
-    }
-    
-    else{
-        manaRegenTimer = 0f;
-    }
+        
+        else{
+            manaRegenTimer = 0f;
+        }
 }
 
 
@@ -39,6 +45,8 @@ public class PlayerMana : MonoBehaviour
         currentMana -= amount;
         currentMana = Mathf.Clamp(currentMana, 0, maxMana); // impede mana negativa ou maior que o máximo
         manaPanel.UpdateUI(currentMana);
+
+        GameManager.Instance.playerCurrentMana = currentMana;
     }
 
     public void RecoverMana(int amount)
@@ -46,6 +54,8 @@ public class PlayerMana : MonoBehaviour
         currentMana += amount;
         currentMana = Mathf.Clamp(currentMana, 0, maxMana);
         manaPanel.UpdateUI(currentMana);
+
+        GameManager.Instance.playerCurrentMana = currentMana;
     }
 
     public bool TemMana(int amount){

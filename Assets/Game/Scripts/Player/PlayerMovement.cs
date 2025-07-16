@@ -18,9 +18,11 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
+        mainCamera = Camera.main;
+        transform.position = GameManager.Instance.playerPosition;
+        mainCamera.transform.position = new Vector3(GameManager.Instance.playerPosition.x, GameManager.Instance.playerPosition.y, -10f);
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
-        mainCamera = Camera.main;
 
     }
 

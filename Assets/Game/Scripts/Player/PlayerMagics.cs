@@ -8,6 +8,7 @@ using System.Collections.Generic;
 public class PlayerMagics : MonoBehaviour
 {
     public GameObject fireballPrefab;  // Referência ao prefab da Fireball
+    public GameObject forceballPrefab;
     // public GameObject iceBlastPrefab;  // Referência ao prefab de uma outra magia
     
     private  List<BaseMagic> availableMagics;  // Lista para armazenar magias
@@ -25,6 +26,7 @@ public class PlayerMagics : MonoBehaviour
 
         // Adicionando magias ao dicionário
         availableMagics.Add(new FireBall(fireballPrefab, 1));
+        availableMagics.Add(new Force(forceballPrefab, 1));
         // availableMagics.Add(new IceBlast(iceBlastPrefab), 1); // Exemplo de outra magia
 
         // Definindo o índice de magias -> a magia indexada com o zero é a padrão ao iniciar o jogo
@@ -64,6 +66,7 @@ public class PlayerMagics : MonoBehaviour
         {
             // Cicla pra magia anterior
             currentMagicIndex = (currentMagicIndex - 1) % availableMagics.Count;
+            if(currentMagicIndex < 0) currentMagicIndex = availableMagics.Count - 1;
             Debug.Log("Magia atual: ");
             Debug.Log(availableMagics[currentMagicIndex]);
         }

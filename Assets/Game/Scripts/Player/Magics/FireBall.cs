@@ -22,7 +22,6 @@ public class FireBall : BaseMagic
             rb.linearVelocity = direction * speed;
         }
 
-        // Se quiser rotacionar a bola de fogo na direção do movimento
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         fireball.transform.rotation = Quaternion.Euler(0, 0, angle);
     }

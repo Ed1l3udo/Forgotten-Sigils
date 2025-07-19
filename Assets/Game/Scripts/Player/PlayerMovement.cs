@@ -34,10 +34,11 @@ public class PlayerMovement : MonoBehaviour
             return;
         }
 
-        MovePlayer();
-        AdjustSprite();
-        KeyHandler();
-        
+        if(canMove){
+            MovePlayer();
+            AdjustSprite();
+            KeyHandler();
+        }
     }
 
     void FixedUpdate()

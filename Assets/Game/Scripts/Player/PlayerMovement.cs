@@ -28,17 +28,20 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        
-        if(isDashing)
+
+        if (isDashing)
         {
             return;
         }
 
-        if(canMove){
+        if (canMove)
+        {
             MovePlayer();
-            AdjustSprite();
             KeyHandler();
         }
+        else playerMovementDirection = Vector2.zero;
+        
+        AdjustSprite();
     }
 
     void FixedUpdate()

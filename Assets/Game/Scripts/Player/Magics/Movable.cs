@@ -3,6 +3,7 @@ using System.Collections;
 
 public class Movable : MonoBehaviour
 {
+
     public GameObject player;
     public float moveTime = 10f;
     public float moveSpeed = 3f;
@@ -11,12 +12,16 @@ public class Movable : MonoBehaviour
     private Rigidbody2D rb;
     private PlayerMovement playerM;
     private SpriteRenderer spRend;
+    public GameObject particlePrefab;
+    private GameObject efeitoAtivo;
 
     [SerializeField] private Sprite staticSprite;
     [SerializeField] private Sprite movingSprite;
 
     void Start()
     {
+        if(player == null) player = GameObject.FindGameObjectWithTag("Player");
+
         rb = GetComponent<Rigidbody2D>();
         spRend = GetComponent<SpriteRenderer>();
         playerM = player.GetComponent<PlayerMovement>(); 
@@ -34,16 +39,21 @@ public class Movable : MonoBehaviour
         spRend.sprite = movingSprite;
         rb.bodyType = RigidbodyType2D.Dynamic;
 
+        efeitoAtivo = Instantiate(particlePrefab, transform.position, Quaternion.identity);
+        efeitoAtivo.transform.SetParent(transform);
+
         float tempoDecorrido = 0f;
 
         while (tempoDecorrido < tempo){
-            
+
             if (Input.GetMouseButtonDown(0)) break;
             
             tempoDecorrido += Time.deltaTime;
             yield return null; 
         }
 
+        if (efeitoAtivo != null) Destroy(efeitoAtivo);
+        
         playerM.canMove = true;        
         canMove = false;
         spRend.sprite = staticSprite;

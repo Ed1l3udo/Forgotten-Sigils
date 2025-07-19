@@ -168,5 +168,6 @@ MonoBehaviour:
   player: {fileID: 0}
   moveTime: 10
   moveSpeed: 3
+  particlePrefab: {fileID: 7559961601886544302, guid: 731069c4608b58f4e855ee4817da098b, type: 3}
   staticSprite: {fileID: -1086075424051696529, guid: f4664da4ff2cec74795601db8f21309e, type: 3}
   movingSprite: {fileID: 287834887, guid: f4664da4ff2cec74795601db8f21309e, type: 3}

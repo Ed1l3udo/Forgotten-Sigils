@@ -38,13 +38,6 @@ public class Log : Damageable
 
         if(!isAwake) animator.SetBool("isAwake", false);
 
-        if (player == null)
-        {
-            GameObject p = GameObject.FindGameObjectWithTag("Player");
-
-            if (p != null) player = p.transform;
-        }
-
         StartCoroutine(BehaviorRoutine());
     }
 

@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class LesserOrc : Damageable
 {
@@ -10,6 +11,7 @@ public class LesserOrc : Damageable
     private int currentHealth;
     private Transform player;
     private bool aggro;
+    private bool isAttacking = false; // <- NOVO
     private Rigidbody2D rb;
     private Animator animator;
     private float distanceToPlayer;
@@ -32,7 +34,6 @@ public class LesserOrc : Damageable
 
     void Update()
     {
-
         if (player == null) return;
 
         direction = (player.position - transform.position).normalized;
@@ -44,21 +45,25 @@ public class LesserOrc : Damageable
             animator.SetBool("Aggro", aggro);
         }
 
-        if (distanceToPlayer < 2f)
+        if (aggro && distanceToPlayer < 2f && !isAttacking)
         {
             animator.SetTrigger("Attack");
-            Attack();
+            StartCoroutine(PerformAttack()); 
         }
 
+        Debug.Log(isAttacking);
     }
 
     void FixedUpdate()
     {
-        if (aggro)
+        if (aggro && !isAttacking)
         {
             rb.linearVelocity = direction * speed;
         }
-        else rb.linearVelocity = Vector2.zero;
+        else
+        {
+            rb.linearVelocity = Vector2.zero;
+        }
     }
 
     void AdjustSprite(Vector2 direction)
@@ -87,7 +92,6 @@ public class LesserOrc : Damageable
         if (collision.gameObject.CompareTag("Player"))
         {
             PlayerHealth playerHealth = collision.gameObject.GetComponent<PlayerHealth>();
-
             if (playerHealth != null)
             {
                 playerHealth.TakeDamage(damage);
@@ -95,15 +99,24 @@ public class LesserOrc : Damageable
         }
     }
 
-    void Attack()
+    IEnumerator PerformAttack()
     {
-        Vector3 spawnPosition = transform.position + (Vector3)(direction.normalized * offsetDistance);
+        if (isAttacking) yield break;
 
-        GameObject slash = Instantiate(slashPrefab, spawnPosition, Quaternion.identity);
+        isAttacking = true;
 
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        slash.transform.rotation = Quaternion.Euler(0, 0, angle);
+        // Vector3 spawnPosition = transform.position + (Vector3)(direction.normalized * offsetDistance);
+
+        // GameObject slash = Instantiate(slashPrefab, spawnPosition, Quaternion.identity);
+        // float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        // slash.transform.rotation = Quaternion.Euler(0, 0, angle);
+
+        yield return new WaitForSeconds(0.833f);
+
+        isAttacking = false;
+        Debug.Log("Ataque terminou, isAttacking = " + isAttacking);
     }
+
 
     public override void TakeDamage(int dano)
     {

@@ -5,7 +5,7 @@ public class LesserOrc : Damageable
 {
     [SerializeField] private int maxHealth = 30;
     [SerializeField] private float speed = 5f;
-    [SerializeField] private int damage;
+    [SerializeField] private int damage = 1;
     [SerializeField] private GameObject slashPrefab;
     [SerializeField] private GameObject playerGameObject;
     private int currentHealth;

@@ -14,6 +14,8 @@ public class KingOrc : Damageable
     [SerializeField] private float dashSpeed = 10f;
     [SerializeField] private float dashDuration = 0.3f;
     [SerializeField] private float dashDelay = 0.5f; // tempo antes de iniciar o dash real
+    [SerializeField] private GameObject summonEffectPrefab;
+
 
     private int currentHealth;
     private Transform player;
@@ -96,6 +98,11 @@ public class KingOrc : Damageable
             Vector2 offset = Random.insideUnitCircle * 5f;
             Vector3 spawnPosition = transform.position + (Vector3)offset;
 
+            if (summonEffectPrefab != null)
+            {
+                Instantiate(summonEffectPrefab, spawnPosition, Quaternion.identity);
+            }
+
             Instantiate(minionPrefab, spawnPosition, Quaternion.identity);
         }
 
@@ -177,9 +184,24 @@ public class KingOrc : Damageable
     public override void TakeDamage(int amount)
     {
         currentHealth -= amount;
+
+        ShowDamageEffect();
+
         if (currentHealth <= 0)
         {
             Die();
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            PlayerHealth playerHealth = collision.gameObject.GetComponent<PlayerHealth>();
+            if (playerHealth != null)
+            {
+                playerHealth.TakeDamage(damage);
+            }
         }
     }
 

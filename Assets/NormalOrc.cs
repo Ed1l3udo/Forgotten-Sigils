@@ -121,6 +121,8 @@ public class NormalOrc : Damageable
         animator.SetTrigger("Hurt");
         currentHealth -= dano;
 
+        ShowDamageEffect();
+
         if (currentHealth <= 0) Die();
     }
 }

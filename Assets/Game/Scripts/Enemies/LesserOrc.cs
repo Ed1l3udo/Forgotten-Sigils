@@ -120,6 +120,8 @@ public class LesserOrc : Damageable
         animator.SetTrigger("Hurt");
         currentHealth -= dano;
 
+        ShowDamageEffect();
+
         if (currentHealth <= 0) Die();
     }
 }

@@ -14,7 +14,8 @@ public class Slime : Damageable
     public override void TakeDamage(int dano)
     {
         currentHealth -= dano;
-        Debug.Log("Slime levou " + dano + " de dano. Vida restante: " + currentHealth);
+
+        ShowDamageEffect();
 
         if (currentHealth <= 0)
         {

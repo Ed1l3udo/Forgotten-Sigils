@@ -420,6 +420,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5e710560aa80e84c9b5154475c7555c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerGameObject: {fileID: 0}
   target: {fileID: 0}
   enemyGFX: {fileID: 5821990223816040623}
   speed: 300
@@ -436,4 +437,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bfc282c164f91240b0c74de1010cb6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathEffect: {fileID: 0}
   maxHealth: 20

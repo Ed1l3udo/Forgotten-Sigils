@@ -1,20 +1,29 @@
 using UnityEngine;
+using System.Collections;
 
-// Classe genérica para qualquer monstro que for tomar dano
 public abstract class Damageable : MonoBehaviour
 {
-    public ParticleSystem deathEffect; 
+    public ParticleSystem deathEffect;
+
+    private SpriteRenderer spriteRenderer;
+    private Color originalColor;
 
     protected virtual void Start()
     {
-        if (deathEffect == null)
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+
+        if (spriteRenderer == null)
         {
-            deathEffect = Resources.Load<ParticleSystem>("DeathSmokeEffect"); 
+            Debug.LogWarning("SpriteRenderer (no objeto ou filhos) não encontrado!");
+        }
+        else
+        {
+            originalColor = spriteRenderer.color;
         }
 
         if (deathEffect == null)
         {
-            Debug.LogWarning("Efeito de morte não atribuído!");
+            deathEffect = Resources.Load<ParticleSystem>("DeathSmokeEffect");
         }
     }
 
@@ -29,5 +38,20 @@ public abstract class Damageable : MonoBehaviour
         }
 
         Destroy(gameObject);
+    }
+
+    protected void ShowDamageEffect()
+    {
+        if (spriteRenderer != null)
+        {
+            StartCoroutine(FlashColor(Color.red, 0.2f));
+        }
+    }
+
+    private IEnumerator FlashColor(Color flashColor, float duration)
+    {
+        spriteRenderer.color = flashColor;
+        yield return new WaitForSeconds(duration);
+        spriteRenderer.color = originalColor;
     }
 }

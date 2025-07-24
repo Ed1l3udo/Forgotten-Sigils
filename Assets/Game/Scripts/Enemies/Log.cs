@@ -65,8 +65,10 @@ public class Log : Damageable
 
     public override void TakeDamage(int damage){
         currentHealth -= damage;
+
+        ShowDamageEffect();
         
-        if(currentHealth <= 0) Die();
+        if (currentHealth <= 0) Die();
     }
 
     IEnumerator BehaviorRoutine()

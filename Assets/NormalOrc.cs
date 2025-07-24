@@ -51,7 +51,6 @@ public class NormalOrc : Damageable
             StartCoroutine(PerformAttack()); 
         }
 
-        Debug.Log(isAttacking);
     }
 
     void FixedUpdate()
@@ -114,7 +113,6 @@ public class NormalOrc : Damageable
         yield return new WaitForSeconds(0.833f);
 
         isAttacking = false;
-        Debug.Log("Ataque terminou, isAttacking = " + isAttacking);
     }
 
 

@@ -50,8 +50,6 @@ public class LesserOrc : Damageable
             animator.SetTrigger("Attack");
             StartCoroutine(PerformAttack()); 
         }
-
-        Debug.Log(isAttacking);
     }
 
     void FixedUpdate()
@@ -114,7 +112,6 @@ public class LesserOrc : Damageable
         yield return new WaitForSeconds(0.833f);
 
         isAttacking = false;
-        Debug.Log("Ataque terminou, isAttacking = " + isAttacking);
     }
 
 

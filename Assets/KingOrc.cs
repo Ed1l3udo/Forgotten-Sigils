@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class KingOrc : Damageable
 {
@@ -24,19 +25,24 @@ public class KingOrc : Damageable
     private float dashTimeLeft;
     private bool isPreparingDash = false;
     private Vector2 direction;
+    private Rigidbody2D rb;
+    [SerializeField] private bool aggro = true;
 
     private void Start()
     {
         currentHealth = maxHealth;
         player = playerGameObject.transform;
         animator = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody2D>();
         minionSpawnTimer = 0f;
         dashTimer = 0f;
+        if (aggro) animator.SetBool("Aggro", true);
     }
 
     private void Update()
     {
-        direction = (player.position - transform.position).normalized;
+        direction = player.position - transform.position;
+        AdjustSprite(direction);
 
         if (isDashing)
         {
@@ -44,21 +50,16 @@ public class KingOrc : Damageable
             return;
         }
 
-        if (!isAttacking && !isPreparingDash)
-        {
-            MoveTowardPlayer();
-        }
-
         minionSpawnTimer += Time.deltaTime;
         if (minionSpawnTimer >= minionSpawnCooldown)
         {
             float chance = Random.Range(0f, 1f);
-            if (chance < 0.4f) InvocarLacaio();
+            if (!isDashing && !isAttacking && chance < 0.4f) StartCoroutine(InvocarLacaio());
             minionSpawnTimer = 0f;
         }
 
         dashTimer += Time.deltaTime;
-        if (dashTimer >= dashCooldown && !isPreparingDash && !isDashing)
+        if (!isAttacking && dashTimer >= dashCooldown && !isPreparingDash && !isDashing)
         {
             float chance = Random.Range(0f, 1f);
             if (chance < 0.5f) PrepararDash();
@@ -66,24 +67,27 @@ public class KingOrc : Damageable
         }
     }
 
-    private void MoveTowardPlayer()
+    private void FixedUpdate()
     {
-        Vector2 direction = player.position - transform.position;
-        
-        if (direction.magnitude > 1.5f) transform.position += (Vector3)direction.normalized * speed * Time.deltaTime;
+        if (!isAttacking && !isPreparingDash && aggro)
+        {
+            rb.linearVelocity = direction.normalized * speed;
 
-        else Attack();
-        
+            if (direction.magnitude < 1.5f)
+            {
+                StartCoroutine(PerformAttack());
+                animator.SetTrigger("Attack");
+            }
+        }
+        else rb.linearVelocity = Vector2.zero;
     }
 
-    private void Attack()
+    IEnumerator InvocarLacaio()
     {
+        if (isAttacking) yield break;
+
         isAttacking = true;
-        animator.SetTrigger("Attack");
-    }
 
-    private void InvocarLacaio()
-    {
         Debug.Log("Summoning!");
         int quantidade = Random.Range(5, 10);
 
@@ -96,6 +100,27 @@ public class KingOrc : Damageable
         }
 
         animator.SetTrigger("Summon");
+
+        yield return new WaitForSeconds(0.850f);
+
+        isAttacking = false;
+    }
+
+    IEnumerator PerformAttack()
+    {
+        if (isAttacking) yield break;
+
+        isAttacking = true;
+
+        // Vector3 spawnPosition = transform.position + (Vector3)(direction.normalized * offsetDistance);
+
+        // GameObject slash = Instantiate(slashPrefab, spawnPosition, Quaternion.identity);
+        // float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        // slash.transform.rotation = Quaternion.Euler(0, 0, angle);
+
+        yield return new WaitForSeconds(0.667f);
+
+        isAttacking = false;
     }
 
     private void PrepararDash()
@@ -157,6 +182,12 @@ public class KingOrc : Damageable
             Die();
         }
     }
+
+    // public void StartFight()
+    // {
+    //     aggro = true;
+    //     animator.SetBool("Aggro", true);
+    // }
 
     private void Die()
     {

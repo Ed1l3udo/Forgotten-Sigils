@@ -49,6 +49,9 @@ MonoBehaviour:
   playerMaxMana: 27
   playerCurrentMana: 0
   playerPosition: {x: 0, y: 0, z: 0}
+  fireBallPrefab: {fileID: 4240184731516300625, guid: 3c19c7e49c1d0c946b21bb3cabb2d8f4, type: 3}
+  windPrefab: {fileID: 8241915467989264710, guid: 0d6d7423d97250141b7c0eb116404c16, type: 3}
+  forceBallPrefab: {fileID: 1636128574243611560, guid: 4a65b64d4f808f44cba6065e73a52f66, type: 3}
   availableMagics: []
   fireAvailable: 0
   windAvailable: 0

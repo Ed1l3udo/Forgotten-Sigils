@@ -10,6 +10,9 @@ public class GameManager : MonoBehaviour
     public int playerMaxMana = 27;
     public int playerCurrentMana;
     [SerializeField] public Vector3 playerPosition;
+    public GameObject fireBallPrefab;
+    public GameObject windPrefab;
+    public GameObject forceBallPrefab;
 
     public List<BaseMagic> availableMagics;
     public bool fireAvailable;
@@ -19,6 +22,10 @@ public class GameManager : MonoBehaviour
     void Awake()
     {
         playerPosition = new Vector3(0f, 0f, 0f);
+
+        if (fireAvailable) availableMagics.Add(new FireBall(fireBallPrefab, 1));
+        if (windAvailable) availableMagics.Add(new WindBlast(windPrefab, 1));
+        if (forceAvailable) availableMagics.Add(new Force(forceBallPrefab, 1));
 
         // Implementação do Singleton
         if (Instance == null)

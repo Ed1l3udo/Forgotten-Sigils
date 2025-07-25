@@ -23,7 +23,7 @@ public class FireBall : BaseMagic
         }
 
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        fireball.transform.rotation = Quaternion.Euler(0, 0, angle);
+        fireball.transform.rotation = Quaternion.Euler(0, 0, angle+90);
     }
 }
 

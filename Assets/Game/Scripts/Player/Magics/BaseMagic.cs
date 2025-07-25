@@ -2,7 +2,7 @@ using UnityEngine;
 
 public abstract class BaseMagic : MonoBehaviour
 {
-    public int ManaCost{ get; private set; }
+    public int ManaCost { get; private set; }
 
     public BaseMagic(int manaCost){
         ManaCost = manaCost;

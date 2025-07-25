@@ -15,12 +15,15 @@ public class EnemyAI : MonoBehaviour
     private bool reachedEndOfPath = false;
     private Vector3 enemyMovementDirection;
     private Vector3 enemyMovementForce;
+    private Slime slimeScript;
 
     private Seeker seeker;
     private Rigidbody2D rb;
 
     void Start()
     {
+        slimeScript = GetComponent<Slime>();
+
         if (playerGameObject != null)
         {
             target = playerGameObject.transform;
@@ -105,7 +108,7 @@ public class EnemyAI : MonoBehaviour
     void MoveEnemy()
     {
         enemyMovementDirection = ((Vector2)path.vectorPath[currentWayPoint] - rb.position).normalized;
-        enemyMovementForce = enemyMovementDirection * speed * Time.deltaTime;
+        if(slimeScript.knockedBack == false) enemyMovementForce = enemyMovementDirection * speed * Time.deltaTime;
         rb.AddForce(enemyMovementForce);
     }
 }

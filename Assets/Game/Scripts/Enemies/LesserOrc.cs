@@ -54,11 +54,11 @@ public class LesserOrc : Damageable
 
     void FixedUpdate()
     {
-        if (aggro && !isAttacking)
+        if (aggro && !isAttacking && !knockedBack)
         {
             rb.linearVelocity = direction * speed;
         }
-        else
+        else if (!knockedBack)
         {
             rb.linearVelocity = Vector2.zero;
         }

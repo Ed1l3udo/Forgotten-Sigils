@@ -7,6 +7,7 @@ public abstract class Damageable : MonoBehaviour
 
     private SpriteRenderer spriteRenderer;
     private Color originalColor;
+    public bool knockedBack = false;
 
     protected virtual void Start()
     {
@@ -53,5 +54,17 @@ public abstract class Damageable : MonoBehaviour
         spriteRenderer.color = flashColor;
         yield return new WaitForSeconds(duration);
         spriteRenderer.color = originalColor;
+    }
+
+    public void ApplyKnockBack()
+    {
+        StartCoroutine(KnockBack());
+    }
+
+    private IEnumerator KnockBack()
+    {
+        knockedBack = true;
+        yield return new WaitForSeconds(1f);
+        knockedBack = false;
     }
 }

@@ -106,7 +106,7 @@ public class Log : Damageable
             Vector2 direction = (player.position - transform.position).normalized;
 
             // Iniciar dash
-            rb.linearVelocity = direction * dashSpeed;
+            if(!knockedBack) rb.linearVelocity = direction * dashSpeed;
 
             // Espera o tempo do dash
             yield return new WaitForSeconds(dashDuration);

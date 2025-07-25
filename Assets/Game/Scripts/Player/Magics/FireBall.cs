@@ -5,6 +5,7 @@ public class FireBall : BaseMagic
 {
     private GameObject fireballPrefab;
     private float speed = 10f;
+    public float offset = 1f;
 
     public FireBall(GameObject prefab, int manaCost) : base(manaCost)
     {
@@ -14,7 +15,7 @@ public class FireBall : BaseMagic
     public override void Cast(Transform caster, Vector3 targetPosition){
         Vector3 direction = (targetPosition - caster.position).normalized;
 
-        GameObject fireball = Object.Instantiate(fireballPrefab, caster.position + (direction * 2f), Quaternion.identity);
+        GameObject fireball = Object.Instantiate(fireballPrefab, caster.position + (direction * offset), Quaternion.identity);
         Rigidbody2D rb = fireball.GetComponent<Rigidbody2D>();
 
         if (rb != null)

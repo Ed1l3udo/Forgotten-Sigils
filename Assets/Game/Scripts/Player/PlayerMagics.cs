@@ -12,6 +12,8 @@ public class PlayerMagics : MonoBehaviour
     public GameObject windBlastPrefab;
     // public GameObject iceBlastPrefab;  // Referência ao prefab de uma outra magia
 
+    public RunesUI runesUI;
+
     private List<BaseMagic> availableMagics;  // Lista para armazenar magias
 
     private int currentMagicIndex; // Índice da magia atual equipada
@@ -58,18 +60,20 @@ public class PlayerMagics : MonoBehaviour
             }
 
             // Trocar de magia com as teclas "Q" e "E"
-            if (Input.GetKeyDown(KeyCode.Q))
+            if (Input.GetKeyDown(KeyCode.E))
             {
                 // Cicla pra próxima magia
                 currentMagicIndex = (currentMagicIndex + 1) % availableMagics.Count;
+                runesUI.HighlightRune(currentMagicIndex+1);
                 Debug.Log("Magia atual: ");
                 Debug.Log(currentMagicIndex);
             }
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.Q))
             {
                 // Cicla pra magia anterior
                 currentMagicIndex = (currentMagicIndex - 1) % availableMagics.Count;
                 if (currentMagicIndex < 0) currentMagicIndex = availableMagics.Count - 1;
+                runesUI.HighlightRune(currentMagicIndex+1);
                 Debug.Log("Magia atual: ");
                 Debug.Log(currentMagicIndex);
             }

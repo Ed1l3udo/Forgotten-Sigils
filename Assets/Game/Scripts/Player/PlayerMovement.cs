@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     private Camera mainCamera;
     private Animator animator;
     private TrailRenderer trailRenderer;
+    public RunesUI runesUI;
     private Rigidbody2D rb;
     private Vector2 playerMovementDirection; 
     private bool canDash = true;
@@ -97,6 +98,7 @@ public class PlayerMovement : MonoBehaviour
         rb.linearVelocity = playerMovementDirection.normalized * dashPower;
         yield return new WaitForSeconds(dashTime);
         isDashing = false;
+        runesUI.StartDashCooldown();
         yield return new WaitForSeconds(dashCooldown);
         canDash = true;
     }

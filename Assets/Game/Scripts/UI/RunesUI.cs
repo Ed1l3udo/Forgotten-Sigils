@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 using System.Collections.Generic;
 
 public class RunesUI : MonoBehaviour
@@ -7,6 +8,8 @@ public class RunesUI : MonoBehaviour
     public Image[] runeSlots;      // Slots visuais (Image UI)
     public Sprite[] runeIcons;     // Sprites das runas
     public string[] associatedMagicClassNames; // Nomes das classes de magia: "FireBall", "WindBlast", etc.
+    public Image dashCooldownOverlay;
+    public float dashCooldownDuration = 1f;
 
     void Start()
     {
@@ -17,7 +20,7 @@ public class RunesUI : MonoBehaviour
     {
         List<BaseMagic> magics = GameManager.Instance.availableMagics;
 
-        
+
         for (int i = 0; i < runeSlots.Length; i++)
         {
             // Esconde por padrão
@@ -45,5 +48,57 @@ public class RunesUI : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void HighlightRune(int selectedIndex)
+    {
+        for (int i = 1; i < runeSlots.Length; i++)
+        {
+            Image img = runeSlots[i];
+
+            bool estaDesbloqueada = img.sprite != null;
+
+            if (!estaDesbloqueada)
+            {
+                // Runa ainda não foi desbloqueada → deixa invisível ou com alpha 0
+                img.color = new Color(1f, 1f, 1f, 0f);
+                img.transform.localScale = Vector3.one;
+                continue;
+            }
+
+            if (i == selectedIndex)
+            {
+                // Destaque da runa selecionada
+                img.color = new Color(1f, 1f, 1f, 1f); // brilho total
+                img.transform.localScale = Vector3.one * 1.2f;
+            }
+            else
+            {
+                // Runa desbloqueada mas não selecionada
+                img.color = new Color(1f, 1f, 1f, 0.7f);
+                img.transform.localScale = Vector3.one;
+            }
+        }
+    }
+
+    public void StartDashCooldown()
+    {
+        StopAllCoroutines();
+        StartCoroutine(AnimateDashCooldown());
+    }
+
+    private IEnumerator AnimateDashCooldown()
+    {
+        float timer = 0f;
+        dashCooldownOverlay.fillAmount = 1f;
+
+        while (timer < dashCooldownDuration)
+        {
+            timer += Time.deltaTime;
+            dashCooldownOverlay.fillAmount = 1f - (timer / dashCooldownDuration);
+            yield return null;
+        }
+
+        dashCooldownOverlay.fillAmount = 0f;
     }
 }

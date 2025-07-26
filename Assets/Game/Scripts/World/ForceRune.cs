@@ -5,6 +5,7 @@ public class ForceRune : MonoBehaviour
     public GameObject particleEffect;
     private GameObject efeitoAtivo;
     public GameObject forceBallPrefab;
+    public RunesUI runesUI;
     public int forceManaCost = 9;
     public float floatHeight = 0.5f;  
     public float floatSpeed = 2f;     
@@ -35,6 +36,7 @@ public class ForceRune : MonoBehaviour
             GameManager.Instance.forceAvailable = true;
             Destroy(gameObject, 4f);
             if (particleEffect != null) efeitoAtivo = Instantiate(particleEffect, transform.position, Quaternion.identity);
+            runesUI.UpdateRunes();
         }
 
     }

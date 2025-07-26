@@ -5,6 +5,8 @@ public class FireRune : MonoBehaviour
     public GameObject particleEffect;
     private GameObject efeitoAtivo;
     public GameObject fireBallPrefab;
+    public RunesUI runesUI;
+
     public int fireBallManaCost = 3;
     public float floatHeight = 0.5f;  
     public float floatSpeed = 2f;     
@@ -35,6 +37,7 @@ public class FireRune : MonoBehaviour
             GameManager.Instance.fireAvailable = true;
             Destroy(gameObject, 4f);
             if (particleEffect != null) efeitoAtivo = Instantiate(particleEffect, transform.position, Quaternion.identity);
+            runesUI.UpdateRunes();
         }
 
     }

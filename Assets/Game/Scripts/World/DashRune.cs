@@ -4,6 +4,8 @@ public class DashRune : MonoBehaviour
 {
     public GameObject particleEffect;
     private GameObject efeitoAtivo;
+    public RunesUI runesUI;
+
     public int dashManaCost = 9;
     public float floatHeight = 0.5f;  
     public float floatSpeed = 2f;     
@@ -33,6 +35,7 @@ public class DashRune : MonoBehaviour
             GameManager.Instance.dashAvailable = true;
             Destroy(gameObject, 4f);
             if (particleEffect != null) efeitoAtivo = Instantiate(particleEffect, transform.position, Quaternion.identity);
+            runesUI.UpdateRunes();
         }
 
     }

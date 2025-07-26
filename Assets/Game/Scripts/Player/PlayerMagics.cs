@@ -14,7 +14,7 @@ public class PlayerMagics : MonoBehaviour
 
     public RunesUI runesUI;
 
-    private List<BaseMagic> availableMagics;  // Lista para armazenar magias
+    private List<BaseMagic> availableMagics = new List<BaseMagic>();  // Lista para armazenar magias
 
     private int currentMagicIndex; // Índice da magia atual equipada
 
@@ -24,8 +24,7 @@ public class PlayerMagics : MonoBehaviour
     {
 
         playerMana = GetComponent<PlayerMana>();
-        // Inicializando o dicionário com as magias disponíveis
-        availableMagics = new List<BaseMagic>();
+        AtualizarMagias();
 
         // Definindo o índice de magias -> a magia indexada com o zero é a padrão ao iniciar o jogo
         currentMagicIndex = 0;
@@ -33,7 +32,6 @@ public class PlayerMagics : MonoBehaviour
 
     void Update()
     {
-        availableMagics = GameManager.Instance.availableMagics;
 
         if (availableMagics.Count != 0)
         {
@@ -64,7 +62,7 @@ public class PlayerMagics : MonoBehaviour
             {
                 // Cicla pra próxima magia
                 currentMagicIndex = (currentMagicIndex + 1) % availableMagics.Count;
-                runesUI.HighlightRune(currentMagicIndex+1);
+                runesUI.HighlightRune(currentMagicIndex + 1);
                 Debug.Log("Magia atual: ");
                 Debug.Log(currentMagicIndex);
             }
@@ -73,10 +71,17 @@ public class PlayerMagics : MonoBehaviour
                 // Cicla pra magia anterior
                 currentMagicIndex = (currentMagicIndex - 1) % availableMagics.Count;
                 if (currentMagicIndex < 0) currentMagicIndex = availableMagics.Count - 1;
-                runesUI.HighlightRune(currentMagicIndex+1);
+                runesUI.HighlightRune(currentMagicIndex + 1);
                 Debug.Log("Magia atual: ");
                 Debug.Log(currentMagicIndex);
             }
         }
+    }
+    
+    public void AtualizarMagias()
+    {
+        if (GameManager.Instance.fireAvailable)  availableMagics.Add(new FireBall(fireballPrefab, 3));
+        if (GameManager.Instance.windAvailable)  availableMagics.Add(new WindBlast(windBlastPrefab, 7));
+        if (GameManager.Instance.forceAvailable) availableMagics.Add(new Force(forceballPrefab, 9));
     }
 }

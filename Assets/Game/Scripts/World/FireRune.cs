@@ -33,8 +33,14 @@ public class FireRune : MonoBehaviour
         if (!collided && other.gameObject.CompareTag("Player"))
         {
             collided = true;
-            GameManager.Instance.availableMagics.Add(new FireBall(fireBallPrefab, fireBallManaCost));
+            
             GameManager.Instance.fireAvailable = true;
+
+            GameManager.Instance.availableMagics.Add(new FireBall(fireBallPrefab, fireBallManaCost));
+
+            PlayerMagics playerMagics = other.gameObject.GetComponent<PlayerMagics>();
+            playerMagics.AtualizarMagias();
+
             Destroy(gameObject, 4f);
             if (particleEffect != null) efeitoAtivo = Instantiate(particleEffect, transform.position, Quaternion.identity);
             runesUI.UpdateRunes();

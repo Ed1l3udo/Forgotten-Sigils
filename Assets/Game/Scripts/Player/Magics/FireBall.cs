@@ -5,7 +5,7 @@ public class FireBall : BaseMagic
 {
     private GameObject fireballPrefab;
     private float speed = 10f;
-    public float offset = 1f;
+    public float offset = 1.2f;
 
     public FireBall(GameObject prefab, int manaCost) : base(manaCost)
     {

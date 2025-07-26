@@ -15,10 +15,10 @@ public class GameManager : MonoBehaviour
     public GameObject forceBallPrefab;
 
     public List<BaseMagic> availableMagics;
-    public bool fireAvailable;
-    public bool windAvailable;
-    public bool forceAvailable;
-    public bool dashAvailable;
+    public bool fireAvailable = false;
+    public bool windAvailable = false;
+    public bool forceAvailable = false;
+    public bool dashAvailable = false;
 
     void Awake()
     {

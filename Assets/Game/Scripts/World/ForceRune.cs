@@ -32,8 +32,14 @@ public class ForceRune : MonoBehaviour
         if (!collided && other.gameObject.CompareTag("Player"))
         {
             collided = true;
-            GameManager.Instance.availableMagics.Add(new Force(forceBallPrefab, forceManaCost));
+            
             GameManager.Instance.forceAvailable = true;
+
+            GameManager.Instance.availableMagics.Add(new Force(forceBallPrefab, forceManaCost));
+
+            PlayerMagics playerMagics = other.gameObject.GetComponent<PlayerMagics>();
+            playerMagics.AtualizarMagias();
+
             Destroy(gameObject, 4f);
             if (particleEffect != null) efeitoAtivo = Instantiate(particleEffect, transform.position, Quaternion.identity);
             runesUI.UpdateRunes();

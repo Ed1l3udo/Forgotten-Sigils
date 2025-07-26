@@ -32,12 +32,17 @@ public class WindRune : MonoBehaviour
         if (!collided && other.gameObject.CompareTag("Player"))
         {
             collided = true;
-            GameManager.Instance.availableMagics.Add(new WindBlast(windBlastPrefab, windBlastManaCost));
+
             GameManager.Instance.windAvailable = true;
+
+            GameManager.Instance.availableMagics.Add(new WindBlast(windBlastPrefab, windBlastManaCost));
+
+            PlayerMagics playerMagics = other.gameObject.GetComponent<PlayerMagics>();
+            playerMagics.AtualizarMagias();
+
             Destroy(gameObject, 4f);
             if (particleEffect != null) efeitoAtivo = Instantiate(particleEffect, transform.position, Quaternion.identity);
             runesUI.UpdateRunes();
         }
-
     }
 }

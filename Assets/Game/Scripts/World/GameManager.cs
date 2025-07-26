@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
     public bool windAvailable = false;
     public bool forceAvailable = false;
     public bool dashAvailable = false;
+    public bool hasNightVision = false;
 
     void Awake()
     {

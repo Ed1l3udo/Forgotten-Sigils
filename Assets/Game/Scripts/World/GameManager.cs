@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     public bool fireAvailable;
     public bool windAvailable;
     public bool forceAvailable;
+    public bool dashAvailable;
 
     void Awake()
     {

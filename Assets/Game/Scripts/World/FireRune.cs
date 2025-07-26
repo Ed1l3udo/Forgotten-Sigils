@@ -26,7 +26,6 @@ public class FireRune : MonoBehaviour
         transform.localScale = new Vector3(scale, scale, scale);
     }
 
-
     void OnCollisionEnter2D(Collision2D other)
     {
         if (!collided && other.gameObject.CompareTag("Player"))

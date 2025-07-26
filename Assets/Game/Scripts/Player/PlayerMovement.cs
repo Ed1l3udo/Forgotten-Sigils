@@ -8,13 +8,14 @@ public class PlayerMovement : MonoBehaviour
     public bool canMove = true;
     private Camera mainCamera;
     private Animator animator;
+    private TrailRenderer trailRenderer;
     private Rigidbody2D rb;
     private Vector2 playerMovementDirection; 
     private bool canDash = true;
     private bool isDashing;
     private float dashPower = 24f;
     private float dashTime = 0.2f;
-    public float dashCooldown = 1f;
+    public float dashCooldown = 3f;
 
     void Start()
     {
@@ -23,6 +24,8 @@ public class PlayerMovement : MonoBehaviour
         mainCamera.transform.position = new Vector3(GameManager.Instance.playerPosition.x, GameManager.Instance.playerPosition.y, -10f);
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        trailRenderer = GetComponent<TrailRenderer>();
+        trailRenderer.emitting = false;
 
     }
 
@@ -78,7 +81,7 @@ public class PlayerMovement : MonoBehaviour
     void KeyHandler()
     {
         // Dash
-        if(Input.GetKeyDown(KeyCode.LeftShift) && canDash)
+        if(Input.GetKeyDown(KeyCode.LeftShift) && canDash && GameManager.Instance.dashAvailable)
         {
             StartCoroutine(Dash());
         }
@@ -87,6 +90,8 @@ public class PlayerMovement : MonoBehaviour
     private IEnumerator Dash()
     {
         Debug.Log("Dashing");
+        trailRenderer.emitting = true;
+        Invoke(nameof(DisableTrail), 0.2f);
         canDash = false;
         isDashing = true;
         rb.linearVelocity = playerMovementDirection.normalized * dashPower;
@@ -95,5 +100,6 @@ public class PlayerMovement : MonoBehaviour
         yield return new WaitForSeconds(dashCooldown);
         canDash = true;
     }
+    void DisableTrail() => trailRenderer.emitting = false;
 
 }

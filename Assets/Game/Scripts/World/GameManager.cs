@@ -13,12 +13,14 @@ public class GameManager : MonoBehaviour
     public GameObject fireBallPrefab;
     public GameObject windPrefab;
     public GameObject forceBallPrefab;
-
+    public GameObject meelePrefab;
     public List<BaseMagic> availableMagics;
     public bool fireAvailable = false;
     public bool windAvailable = false;
     public bool forceAvailable = false;
     public bool dashAvailable = false;
+    public bool meleeAvailable = false;
+    
     public bool hasNightVision = false;
 
     void Awake()

@@ -10,6 +10,7 @@ public class PlayerMagics : MonoBehaviour
     public GameObject fireballPrefab;  // Referência ao prefab da Fireball
     public GameObject forceballPrefab;
     public GameObject windBlastPrefab;
+    public GameObject meelePrefab;
     // public GameObject iceBlastPrefab;  // Referência ao prefab de uma outra magia
 
     public RunesUI runesUI;
@@ -74,6 +75,15 @@ public class PlayerMagics : MonoBehaviour
                 // Debug.Log("Magia atual: ");
                 // Debug.Log(currentMagicIndex);
             }
+        }
+
+        if (GameManager.Instance.meleeAvailable && Input.GetMouseButtonDown(1))
+        {
+            Vector3 mouseWorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            mouseWorldPosition.z = 0;
+
+            var melee = new MeleeMagic(meelePrefab, 0);
+            melee.Cast(transform, mouseWorldPosition);
         }
     }
     

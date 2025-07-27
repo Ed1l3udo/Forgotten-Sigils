@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Yellow_ruins6_0: 5978245051146005971
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

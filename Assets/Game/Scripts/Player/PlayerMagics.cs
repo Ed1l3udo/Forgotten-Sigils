@@ -22,7 +22,6 @@ public class PlayerMagics : MonoBehaviour
 
     void Start()
     {
-
         playerMana = GetComponent<PlayerMana>();
         AtualizarMagias();
 
@@ -80,8 +79,22 @@ public class PlayerMagics : MonoBehaviour
     
     public void AtualizarMagias()
     {
-        if (GameManager.Instance.fireAvailable)  availableMagics.Add(new FireBall(fireballPrefab, 3));
-        if (GameManager.Instance.windAvailable)  availableMagics.Add(new WindBlast(windBlastPrefab, 7));
-        if (GameManager.Instance.forceAvailable) availableMagics.Add(new Force(forceballPrefab, 9));
+        if (GameManager.Instance.fireAvailable &&
+            !availableMagics.Exists(m => m is FireBall))
+        {
+            availableMagics.Add(new FireBall(fireballPrefab, 3));
+        }
+
+        if (GameManager.Instance.windAvailable &&
+            !availableMagics.Exists(m => m is WindBlast))
+        {
+            availableMagics.Add(new WindBlast(windBlastPrefab, 7));
+        }
+
+        if (GameManager.Instance.forceAvailable &&
+            !availableMagics.Exists(m => m is Force))
+        {
+            availableMagics.Add(new Force(forceballPrefab, 9));
+        }
     }
 }

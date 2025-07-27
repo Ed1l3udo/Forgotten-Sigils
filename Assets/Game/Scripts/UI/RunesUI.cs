@@ -9,6 +9,10 @@ public class RunesUI : MonoBehaviour
     public Sprite[] runeIcons;     // Sprites das runas
     public string[] associatedMagicClassNames; // Nomes das classes de magia: "FireBall", "WindBlast", etc.
     public Image dashCooldownOverlay;
+    private List<BaseMagic> magics = new List<BaseMagic>();
+    public GameObject fireballPrefab;  // Referência ao prefab da Fireball
+    public GameObject forceballPrefab;
+    public GameObject windBlastPrefab;
     public float dashCooldownDuration = 1f;
 
     void Start()
@@ -18,9 +22,7 @@ public class RunesUI : MonoBehaviour
 
     public void UpdateRunes()
     {
-        List<BaseMagic> magics = GameManager.Instance.availableMagics;
-
-
+        AtualizarMagias();
         for (int i = 0; i < runeSlots.Length; i++)
         {
             // Esconde por padrão
@@ -100,5 +102,26 @@ public class RunesUI : MonoBehaviour
         }
 
         dashCooldownOverlay.fillAmount = 0f;
+    }
+    
+        public void AtualizarMagias()
+    {
+        if (GameManager.Instance.fireAvailable &&
+            !magics.Exists(m => m is FireBall))
+        {
+            magics.Add(new FireBall(fireballPrefab, 3));
+        }
+
+        if (GameManager.Instance.windAvailable &&
+            !magics.Exists(m => m is WindBlast))
+        {
+            magics.Add(new WindBlast(windBlastPrefab, 7));
+        }
+
+        if (GameManager.Instance.forceAvailable &&
+            !magics.Exists(m => m is Force))
+        {
+            magics.Add(new Force(forceballPrefab, 9));
+        }
     }
 }

@@ -108785,6 +108785,10 @@ PrefabInstance:
       propertyPath: canMove
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4899224417530828694, guid: 2f687720fc7663146a39d49bb4d3b1ca, type: 3}
+      propertyPath: runesUI
+      value: 
+      objectReference: {fileID: 1620558574}
     - target: {fileID: 7864730710631040704, guid: 2f687720fc7663146a39d49bb4d3b1ca, type: 3}
       propertyPath: runesUI
       value: 
@@ -108951,6 +108955,18 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4015655384909080676, guid: d8f8b79b2312a2a448ff981acf728141, type: 3}
+      propertyPath: fireballPrefab
+      value: 
+      objectReference: {fileID: 4240184731516300625, guid: 3c19c7e49c1d0c946b21bb3cabb2d8f4, type: 3}
+    - target: {fileID: 4015655384909080676, guid: d8f8b79b2312a2a448ff981acf728141, type: 3}
+      propertyPath: forceballPrefab
+      value: 
+      objectReference: {fileID: 1636128574243611560, guid: 4a65b64d4f808f44cba6065e73a52f66, type: 3}
+    - target: {fileID: 4015655384909080676, guid: d8f8b79b2312a2a448ff981acf728141, type: 3}
+      propertyPath: windBlastPrefab
+      value: 
+      objectReference: {fileID: 8241915467989264710, guid: 0d6d7423d97250141b7c0eb116404c16, type: 3}
     - target: {fileID: 5456545790945389223, guid: d8f8b79b2312a2a448ff981acf728141, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

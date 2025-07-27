@@ -2,26 +2,44 @@ using UnityEngine;
 
 public class Force : BaseMagic
 {
-    private GameObject forceballPrefab;
-    private float speed = 10f;
+    private GameObject beamPrefab;
+    private float beamDuration = 0.2f;
 
     public Force(GameObject prefab, int manaCost) : base(manaCost)
     {
-        forceballPrefab = prefab;
+        beamPrefab = prefab;
     }
-    
-    public override void Cast(Transform caster, Vector3 targetPosition){
-        Vector3 direction = (targetPosition - caster.position).normalized;
 
-        GameObject forceball = Object.Instantiate(forceballPrefab, caster.position + (direction * 2f), Quaternion.identity);
-        Rigidbody2D rb = forceball.GetComponent<Rigidbody2D>();
+    public override void Cast(Transform caster, Vector3 targetPosition)
+    {
+        Vector3 direction = targetPosition - caster.position;
+        float distance = direction.magnitude;
+        direction.Normalize();
 
-        if (rb != null)
+        // Verifica alvo no ponto do clique
+        Collider2D hitCollider = Physics2D.OverlapCircle(targetPosition, 0.1f);
+        if (hitCollider != null)
         {
-            rb.linearVelocity = direction * speed;
+            Movable alvo = hitCollider.GetComponent<Movable>();
+            if (alvo != null)
+            {
+                Debug.Log("Movable detectado: " + alvo.name);
+                alvo.EnterMoveState(); 
+            }
         }
 
+        // Instancia o feixe na posição do caster
+        GameObject beam = Object.Instantiate(beamPrefab, caster.position, Quaternion.identity);
+
+        // Escala o feixe no eixo X (deve ser orientado da esquerda para a direita)
+        beam.transform.localScale = new Vector3(distance, beam.transform.localScale.y, 1f);
+
+        // Rotaciona o feixe
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        forceball.transform.rotation = Quaternion.Euler(0, 0, angle);
+        beam.transform.rotation = Quaternion.Euler(0, 0, angle);
+
+
+        // Destroi após o tempo
+        Object.Destroy(beam, beamDuration);
     }
 }

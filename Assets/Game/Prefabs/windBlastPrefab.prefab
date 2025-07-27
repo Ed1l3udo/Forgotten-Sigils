@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2909213953333305420}
-  - component: {fileID: 6653766453838669355}
-  - component: {fileID: 8136012185230473555}
   - component: {fileID: 8871890297927864610}
+  - component: {fileID: 5759620944297362767}
+  - component: {fileID: 7379249853380908239}
   m_Layer: 0
   m_Name: windBlastPrefab
   m_TagString: Untagged
@@ -34,7 +34,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &6653766453838669355
+--- !u!114 &8871890297927864610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8241915467989264710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7346c45d31063f4080d7ed00d4d52c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &5759620944297362767
 Animator:
   serializedVersion: 7
   m_ObjectHideFlags: 0
@@ -56,7 +68,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!212 &8136012185230473555
+--- !u!212 &7379249853380908239
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -111,15 +123,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8871890297927864610
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8241915467989264710}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7346c45d31063f4080d7ed00d4d52c0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

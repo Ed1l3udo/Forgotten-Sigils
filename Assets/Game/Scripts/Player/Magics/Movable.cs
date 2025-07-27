@@ -34,8 +34,9 @@ public class Movable : MonoBehaviour
 
     IEnumerator ExecutarPorTempo(float tempo)
     {
-        playerM.canMove = false;      
-        canMove = true;                
+        Debug.Log("Corrotina EnterMoveState iniciada");
+        playerM.canMove = false;
+        canMove = true;
         spRend.sprite = movingSprite;
         rb.bodyType = RigidbodyType2D.Dynamic;
 
@@ -44,20 +45,22 @@ public class Movable : MonoBehaviour
 
         float tempoDecorrido = 0f;
 
-        while (tempoDecorrido < tempo){
+        while (tempoDecorrido < tempo)
+        {
 
-            if (Input.GetMouseButtonDown(0)) break;
-            
+            if (Input.GetMouseButtonDown(0) && tempoDecorrido > 2f) break;
+
             tempoDecorrido += Time.deltaTime;
-            yield return null; 
+            yield return null;
         }
 
         if (efeitoAtivo != null) Destroy(efeitoAtivo);
-        
-        playerM.canMove = true;        
+
+        playerM.canMove = true;
         canMove = false;
         spRend.sprite = staticSprite;
         rb.bodyType = RigidbodyType2D.Static;
+        Debug.Log("Corrotina EnterMoveState Finalizada");
     }
 
     void Update()

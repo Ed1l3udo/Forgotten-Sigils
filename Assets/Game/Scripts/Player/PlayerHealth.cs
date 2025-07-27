@@ -6,6 +6,7 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private HealthUI HealthPanel;
     [SerializeField] private int maxHealth;
     private int currentHealth;
+    public bool foiAtacadoDuranteCura = false;
 
     void Start(){
         currentHealth = GameManager.Instance.playerCurrentHealth;
@@ -24,8 +25,10 @@ public class PlayerHealth : MonoBehaviour
         HealthPanel.UpdateUI(currentHealth);
 
         GameManager.Instance.playerCurrentHealth = currentHealth;
+        
+        foiAtacadoDuranteCura = true;
 
-        if(currentHealth == 0) Die();
+        if (currentHealth == 0) Die();
     }
 
     public void Heal(int healing)

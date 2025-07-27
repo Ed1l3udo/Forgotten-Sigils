@@ -153,6 +153,7 @@ MonoBehaviour:
   fireballPrefab: {fileID: 4240184731516300625, guid: 3c19c7e49c1d0c946b21bb3cabb2d8f4, type: 3}
   forceballPrefab: {fileID: 1636128574243611560, guid: 4a65b64d4f808f44cba6065e73a52f66, type: 3}
   windBlastPrefab: {fileID: 8241915467989264710, guid: 0d6d7423d97250141b7c0eb116404c16, type: 3}
+  meelePrefab: {fileID: 4432227668723486617, guid: 255bd58c4604f6f4c81bf81227e629ab, type: 3}
   runesUI: {fileID: 0}
 --- !u!114 &3081522576337162845
 MonoBehaviour:

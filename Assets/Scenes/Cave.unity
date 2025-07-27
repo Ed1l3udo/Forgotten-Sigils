@@ -79682,6 +79682,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ForceRune
       objectReference: {fileID: 0}
+    - target: {fileID: 4162058408499428538, guid: 6fc39a870e43fc74b862a20d49a1c767, type: 3}
+      propertyPath: runesUI
+      value: 
+      objectReference: {fileID: 1620558574}
     - target: {fileID: 8049856053645647960, guid: 6fc39a870e43fc74b862a20d49a1c767, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.6230698

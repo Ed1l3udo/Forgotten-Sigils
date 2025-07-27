@@ -11,6 +11,8 @@ public class PlayerMagics : MonoBehaviour
     public GameObject forceballPrefab;
     public GameObject windBlastPrefab;
     public GameObject meelePrefab;
+    public GameObject healParticlePrefab;
+
     // public GameObject iceBlastPrefab;  // Referência ao prefab de uma outra magia
 
     public RunesUI runesUI;
@@ -84,6 +86,21 @@ public class PlayerMagics : MonoBehaviour
 
             var melee = new MeleeMagic(meelePrefab, 0);
             melee.Cast(transform, mouseWorldPosition);
+        }
+
+        if (GameManager.Instance.healAvailable && Input.GetKeyDown(KeyCode.F))
+        {
+            int manaCost = 20;
+            if (playerMana.TemMana(manaCost))
+            {
+                playerMana.UseMana(manaCost);
+                Heal healing = new Heal(this, manaCost, healParticlePrefab);
+                healing.Cast(transform, transform.position); // Não importa a posição
+            }
+            else
+            {
+                Debug.Log("Mana insuficiente para curar.");
+            }
         }
     }
     

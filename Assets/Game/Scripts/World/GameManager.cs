@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
     public bool forceAvailable = false;
     public bool dashAvailable = false;
     public bool meleeAvailable = false;
-    
+    public bool healAvailable = false;
     public bool hasNightVision = false;
 
     void Awake()

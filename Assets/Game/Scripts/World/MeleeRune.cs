@@ -30,7 +30,14 @@ public class MeleeRune : MonoBehaviour
 
         if (playerNearby && Input.GetKeyDown(KeyCode.R))
         {
-            ActivateRune();
+            if (GameManager.Instance.hasNightVision)
+            {
+                ActivateRune();
+            }
+            else
+            {
+                // fazer caixa de texto
+            }
         }
     }
 

@@ -8,6 +8,7 @@ public class CameraFollow : MonoBehaviour
 
     void Start()
     {
+        transform.position = new Vector3 (GameManager.Instance.playerPosition.x, GameManager.Instance.playerPosition.y, -10f); 
         // Calcula a distância inicial entre a câmera e o jogador
         if (target != null)
         {

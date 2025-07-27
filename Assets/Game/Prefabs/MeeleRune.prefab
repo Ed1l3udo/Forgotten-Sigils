@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 1031904412685141910}
   - component: {fileID: 1925619437551724572}
   - component: {fileID: 1002978014117625900}
-  - component: {fileID: 5372103746267922912}
+  - component: {fileID: 970599731260342099}
+  - component: {fileID: 217666878861454108}
   m_Layer: 0
   m_Name: MeeleRune
   m_TagString: Untagged
@@ -126,7 +127,7 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0.004217625}
   m_Size: {x: 1.043938, y: 1.121446}
   m_Direction: 0
---- !u!114 &5372103746267922912
+--- !u!114 &970599731260342099
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -135,11 +136,57 @@ MonoBehaviour:
   m_GameObject: {fileID: 5524169008729795738}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d308195357da2443943a0c3fa6caa54, type: 3}
+  m_Script: {fileID: 11500000, guid: 1dee16b491f903c43b258b6619972e1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   particleEffect: {fileID: 4524669568213704706, guid: 1071e2b5a84f50e4f95127d4e4499531, type: 3}
   runesUI: {fileID: 0}
-  lightManaCost: 0
+  meleeManaCost: 0
   floatHeight: 0.5
   floatSpeed: 2
+--- !u!61 &217666878861454108
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5524169008729795738}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.125, y: 1.3125}
+    newSize: {x: 1.125, y: 1.3125}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 3, y: 3}
+  m_EdgeRadius: 0

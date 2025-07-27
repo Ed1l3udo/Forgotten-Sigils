@@ -9,6 +9,6 @@ public class HealthUI : MonoBehaviour
 
     public void UpdateUI(int currentHealth)
     {
-        heartImage.sprite = hearts[currentHealth - 1];
+        heartImage.sprite = hearts[currentHealth];
     }
 }

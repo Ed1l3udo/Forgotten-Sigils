@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5861249622367531856}
   - component: {fileID: 3485714418000160945}
   - component: {fileID: 7123588944397335583}
+  - component: {fileID: 608758338449492394}
   m_Layer: 0
   m_Name: WindRune
   m_TagString: Untagged
@@ -140,6 +141,53 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   particleEffect: {fileID: 4524669568213704706, guid: 93865e3d366c48441bfc942bdba27d52, type: 3}
   windBlastPrefab: {fileID: 8241915467989264710, guid: 0d6d7423d97250141b7c0eb116404c16, type: 3}
+  runesUI: {fileID: 0}
   windBlastManaCost: 7
   floatHeight: 0.5
   floatSpeed: 2
+--- !u!61 &608758338449492394
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6932322140628484626}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.25, y: 1.3125}
+    newSize: {x: 1.25, y: 1.5625}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 3, y: 3}
+  m_EdgeRadius: 0

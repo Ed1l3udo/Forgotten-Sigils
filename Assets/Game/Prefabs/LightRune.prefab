@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 6325932360941553245}
   - component: {fileID: 2922085117981408427}
   - component: {fileID: 5926493338346530174}
-  - component: {fileID: 5887675652850425526}
+  - component: {fileID: 9148807096254651025}
+  - component: {fileID: 7856693603658274280}
   m_Layer: 0
   m_Name: LightRune
   m_TagString: Untagged
@@ -78,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: -922523203
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 3302407082011706126, guid: eec1286af17d2b646881628d469533ec, type: 3}
+  m_Sprite: {fileID: -1637039492576602953, guid: eec1286af17d2b646881628d469533ec, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -126,7 +127,7 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0.004217625}
   m_Size: {x: 1.043938, y: 1.121446}
   m_Direction: 0
---- !u!114 &5887675652850425526
+--- !u!114 &9148807096254651025
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -135,11 +136,57 @@ MonoBehaviour:
   m_GameObject: {fileID: 3511374158934999156}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 272f9b070968aaa449e5f56a443812ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 4d308195357da2443943a0c3fa6caa54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particleEffect: {fileID: 4524669568213704706, guid: f654a0b31c5c84d428f4f33b7cb4ec76, type: 3}
+  particleEffect: {fileID: 4524669568213704706, guid: 41e9182e8dc921a4ba6937594e48ad26, type: 3}
   runesUI: {fileID: 0}
-  dashManaCost: 0
+  lightManaCost: 0
   floatHeight: 0.5
   floatSpeed: 2
+--- !u!61 &7856693603658274280
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3511374158934999156}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.1875, y: 1.3125}
+    newSize: {x: 1.125, y: 1.3125}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 3, y: 3}
+  m_EdgeRadius: 0

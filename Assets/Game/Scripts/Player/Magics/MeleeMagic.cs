@@ -18,7 +18,7 @@ public class MeleeMagic : BaseMagic
         GameObject slash = Object.Instantiate(meleePrefab, spawnPosition, Quaternion.identity);
 
         // Gira para ficar voltado para o mouse
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        float angle = (Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg) + 65f;
         slash.transform.rotation = Quaternion.Euler(0, 0, angle);
     }
 }

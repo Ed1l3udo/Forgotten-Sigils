@@ -105,23 +105,23 @@ public class RunesUI : MonoBehaviour
     }
     
         public void AtualizarMagias()
-    {
-        if (GameManager.Instance.fireAvailable &&
-            !magics.Exists(m => m is FireBall))
         {
-            magics.Add(new FireBall(fireballPrefab, 3));
-        }
+            if (GameManager.Instance.fireAvailable &&
+                !magics.Exists(m => m is FireBall))
+            {
+                magics.Add(new FireBall(fireballPrefab, 3));
+            }
 
-        if (GameManager.Instance.windAvailable &&
-            !magics.Exists(m => m is WindBlast))
-        {
-            magics.Add(new WindBlast(windBlastPrefab, 7));
-        }
+            if (GameManager.Instance.windAvailable &&
+                !magics.Exists(m => m is WindBlast))
+            {
+                magics.Add(new WindBlast(windBlastPrefab, 7));
+            }
 
-        if (GameManager.Instance.forceAvailable &&
-            !magics.Exists(m => m is Force))
-        {
-            magics.Add(new Force(forceballPrefab, 9));
+            if (GameManager.Instance.forceAvailable &&
+                !magics.Exists(m => m is Force))
+            {
+                magics.Add(new Force(forceballPrefab, 9));
+            }
         }
-    }
 }

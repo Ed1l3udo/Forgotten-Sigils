@@ -11,8 +11,21 @@ public class MeleeHitbox : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Damageable alvo = other.gameObject.GetComponent<Damageable>();
+        // Dano em inimigos ou alvos
+        Damageable alvo = other.GetComponent<Damageable>();
+        if (alvo != null)
+        {
+            alvo.TakeDamage(dano);
+        }
 
-        if (alvo != null) alvo.TakeDamage(dano);
+        // Quebra de tiles
+        if (other.gameObject.CompareTag("TilemapBreakable"))
+        {
+            BreakableTile destructible = other.GetComponent<BreakableTile>();
+            if (destructible != null)
+            {
+                destructible.DestroyTileAt(transform.position);
+            }
+        }
     }
 }

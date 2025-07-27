@@ -7,7 +7,7 @@ public class CaveEntry : MonoBehaviour
 
     void OnTriggerEnter2D()
     {
-        GameManager.Instance.playerPosition = new Vector3 (0, 0, 0);
+        GameManager.Instance.playerPosition = new Vector3 (-1.5f, -59f, 0);
         SceneManager.LoadScene(nextScene);
     }
 }

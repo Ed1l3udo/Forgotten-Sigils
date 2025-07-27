@@ -76,6 +76,7 @@ public class MeleeRune : MonoBehaviour
         GameManager.Instance.meleeAvailable = true;
         Destroy(gameObject, 4f);
         if (particleEffect != null) efeitoAtivo = Instantiate(particleEffect, transform.position, Quaternion.identity);
+        if (interactionMessage != null) interactionMessage.SetActive(false);
         runesUI.UpdateRunes();
     }
 }

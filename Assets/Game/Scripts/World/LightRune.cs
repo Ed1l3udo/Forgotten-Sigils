@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class LightRune : MonoBehaviour
 {
@@ -63,12 +64,28 @@ public class LightRune : MonoBehaviour
         }
     }
 
+    private IEnumerator DelayedIluminar(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+
+        if (playerRef != null)
+        {
+            PlayerNightVision vision = playerRef.GetComponent<PlayerNightVision>();
+            if (vision != null)
+            {
+                vision.Iluminar();
+            }
+        }
+    }
+
 
     void ActivateRune()
     {
         GameManager.Instance.hasNightVision = true;
+        StartCoroutine(DelayedIluminar(3f));
         Destroy(gameObject, 4f);
         if (particleEffect != null) efeitoAtivo = Instantiate(particleEffect, transform.position, Quaternion.identity);
+        if (interactionMessage != null) interactionMessage.SetActive(false);
         runesUI.UpdateRunes();
     }
 }

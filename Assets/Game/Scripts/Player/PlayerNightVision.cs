@@ -16,4 +16,17 @@ public class PlayerNightVision : MonoBehaviour
             playerLight.pointLightOuterRadius = 1;
         }
     }
+
+    // usado quando pega a runa de luz
+    public void Iluminar()
+    {
+        if (GameManager.Instance.hasNightVision)
+        {
+            playerLight.pointLightOuterRadius = 7;
+        }
+        else
+        {
+            playerLight.pointLightOuterRadius = 1;
+        }
+    }
 }

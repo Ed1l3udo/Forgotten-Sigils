@@ -14,6 +14,7 @@ public class Movable : MonoBehaviour
     private SpriteRenderer spRend;
     public GameObject particlePrefab;
     private GameObject efeitoAtivo;
+    public int number;
 
     [SerializeField] private Sprite staticSprite;
     [SerializeField] private Sprite movingSprite;
@@ -34,7 +35,6 @@ public class Movable : MonoBehaviour
 
     IEnumerator ExecutarPorTempo(float tempo)
     {
-        Debug.Log("Corrotina EnterMoveState iniciada");
         playerM.canMove = false;
         canMove = true;
         spRend.sprite = movingSprite;
@@ -47,6 +47,7 @@ public class Movable : MonoBehaviour
 
         while (tempoDecorrido < tempo)
         {
+            playerM.canMove = false;
 
             if (Input.GetMouseButtonDown(0) && tempoDecorrido > 2f) break;
 
@@ -59,8 +60,7 @@ public class Movable : MonoBehaviour
         playerM.canMove = true;
         canMove = false;
         spRend.sprite = staticSprite;
-        rb.bodyType = RigidbodyType2D.Static;
-        Debug.Log("Corrotina EnterMoveState Finalizada");
+        rb.bodyType = RigidbodyType2D.Kinematic;
     }
 
     void Update()

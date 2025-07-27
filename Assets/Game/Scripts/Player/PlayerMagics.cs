@@ -63,8 +63,8 @@ public class PlayerMagics : MonoBehaviour
                 // Cicla pra próxima magia
                 currentMagicIndex = (currentMagicIndex + 1) % availableMagics.Count;
                 runesUI.HighlightRune(currentMagicIndex + 1);
-                Debug.Log("Magia atual: ");
-                Debug.Log(currentMagicIndex);
+                // Debug.Log("Magia atual: ");
+                // Debug.Log(currentMagicIndex);
             }
             if (Input.GetKeyDown(KeyCode.Q))
             {
@@ -72,8 +72,8 @@ public class PlayerMagics : MonoBehaviour
                 currentMagicIndex = (currentMagicIndex - 1) % availableMagics.Count;
                 if (currentMagicIndex < 0) currentMagicIndex = availableMagics.Count - 1;
                 runesUI.HighlightRune(currentMagicIndex + 1);
-                Debug.Log("Magia atual: ");
-                Debug.Log(currentMagicIndex);
+                // Debug.Log("Magia atual: ");
+                // Debug.Log(currentMagicIndex);
             }
         }
     }

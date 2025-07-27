@@ -43,7 +43,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3448918165992960686}
-  m_BodyType: 2
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -169,5 +169,6 @@ MonoBehaviour:
   moveTime: 10
   moveSpeed: 3
   particlePrefab: {fileID: 7559961601886544302, guid: f9913327ef0ced849902cdd642c7f6c3, type: 3}
+  number: 0
   staticSprite: {fileID: 553242680058237286, guid: f23f16b083ad7a340926e99869d32a95, type: 3}
   movingSprite: {fileID: -70419533, guid: f23f16b083ad7a340926e99869d32a95, type: 3}

@@ -23,7 +23,6 @@ public class Force : BaseMagic
             Movable alvo = hitCollider.GetComponent<Movable>();
             if (alvo != null)
             {
-                Debug.Log("Movable detectado: " + alvo.name);
                 alvo.EnterMoveState(); 
             }
         }

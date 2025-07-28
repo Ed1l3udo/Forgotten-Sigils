@@ -74,7 +74,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -922523203
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 8939838353123978938, guid: 1a22a0da070e51f4b8ad85dc8381cf98, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -242,9 +242,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -2006820251
+  m_SortingLayerID: -922523203
   m_SortingLayer: 3
-  m_SortingOrder: 1
+  m_SortingOrder: 20
   m_Sprite: {fileID: 1429650113223627552, guid: 9252b3241846a864bbf7fe5d19a3e9b7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -438,4 +438,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathEffect: {fileID: 0}
+  knockedBack: 0
   maxHealth: 20

@@ -7,7 +7,7 @@ public class MeleeCaveExit : MonoBehaviour
 
     void OnTriggerEnter2D()
     {
-        GameManager.Instance.playerPosition = new Vector3 (-123f, -91f, 0f);
+        GameManager.Instance.playerPosition = new Vector3 (-116f, -15f, 0f);
         SceneManager.LoadScene(nextScene);
     }
 }

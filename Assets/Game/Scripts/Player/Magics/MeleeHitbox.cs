@@ -19,12 +19,13 @@ public class MeleeHitbox : MonoBehaviour
         }
 
         // Quebra de tiles
-        if (other.gameObject.CompareTag("TilemapBreakable"))
+        if (other.gameObject.CompareTag("TileMapBreakable"))
         {
             BreakableTile destructible = other.GetComponent<BreakableTile>();
             if (destructible != null)
             {
-                destructible.DestroyTileAt(transform.position);
+                destructible.DestroyAllTiles();
+                GameManager.Instance.caveWallHasBeenBroken = true;
             }
         }
     }

@@ -32,6 +32,18 @@ public class WindBlast : BaseMagic
                 damageable.ApplyKnockBack();
                 rb.linearVelocity = direction * knockbackForce;
             }
+
+            if (hit.gameObject.CompareTag("GrassBreakable"))
+            {
+                Debug.Log("Detectado: " + hit.name);
+                BreakableGrass destructible = hit.GetComponent<BreakableGrass>();
+                if (destructible != null)
+                {
+                    Debug.Log("Tentando destruir");
+                    destructible.DestroyAllTiles();
+                    GameManager.Instance.grassHasBeenBroken = true;
+                }
+            }
         }
     }
 }

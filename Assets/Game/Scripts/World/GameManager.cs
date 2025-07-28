@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour
     public GameObject forceBallPrefab;
     public GameObject meelePrefab;
     public List<BaseMagic> availableMagics;
+    public bool grassHasBeenBroken = false;
+    public bool caveWallHasBeenBroken = false;
     public bool fireAvailable = false;
     public bool windAvailable = false;
     public bool forceAvailable = false;
@@ -25,8 +27,11 @@ public class GameManager : MonoBehaviour
 
     void Awake()
     {
-        // playerPosition = new Vector3(-120, -135, 0);
-        playerPosition = new Vector3(0, 0, 0);
+        // playerPosition = new Vector3(-120, -135, 0); // inicio jogo
+        // playerPosition = new Vector3(0, 0, 0);
+        // playerPosition = new Vector3(-1f, -38f, 0); //inicio caverna
+        playerPosition = new Vector3(-20f, -60f, 0); //runa vento
+
 
         if (fireAvailable) availableMagics.Add(new FireBall(fireBallPrefab, 1));
         if (windAvailable) availableMagics.Add(new WindBlast(windPrefab, 1));

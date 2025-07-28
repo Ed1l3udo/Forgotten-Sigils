@@ -9,20 +9,27 @@ public class FireRune : MonoBehaviour
     public GameObject interactionMessage; 
     private bool playerNearby = false;
     private GameObject playerRef;
+    public string[] falas;
+    private DialogoManager dialogoManager;
     public int fireBallManaCost = 3;
     public float floatHeight = 0.5f;
     public float floatSpeed = 2f;
     private Vector3 startPosition;
-    private bool collided = false;
+    private bool ativado = false;
 
     void Start()
     {
-        if (GameManager.Instance.fireAvailable) Destroy(gameObject);
+        if (GameManager.Instance.fireAvailable)
+        {
+            Destroy(gameObject);
+            return;
+        }
         startPosition = transform.position;
     }
 
     void Update()
     {
+        if (ativado) return;
         float newY = startPosition.y + Mathf.Sin(Time.time * floatSpeed) * floatHeight;
         transform.position = new Vector3(startPosition.x, newY, startPosition.z);
 
@@ -31,7 +38,10 @@ public class FireRune : MonoBehaviour
 
         if (playerNearby && Input.GetKeyDown(KeyCode.R))
         {
-            ActivateRune();
+            if (interactionMessage != null)
+                interactionMessage.SetActive(false);
+            DialogoManager.Instance.IniciarDialogo(falas, ActivateRune);
+            ativado = true; // impede reativar
         }
     }
 

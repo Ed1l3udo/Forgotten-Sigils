@@ -16,7 +16,7 @@ public class HealRune : MonoBehaviour
 
     void Start()
     {
-        if (GameManager.Instance.forceAvailable) Destroy(gameObject);
+        if (GameManager.Instance.healAvailable) Destroy(gameObject);
         startPosition = transform.position;
     }
 

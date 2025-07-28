@@ -16,7 +16,7 @@ public class DashRune : MonoBehaviour
 
     void Start()
     {
-        if (GameManager.Instance.forceAvailable) Destroy(gameObject);
+        if (GameManager.Instance.dashAvailable) Destroy(gameObject);
         startPosition = transform.position;
     }
 

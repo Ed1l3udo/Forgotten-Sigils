@@ -16,7 +16,7 @@ public class MeleeRune : MonoBehaviour
 
     void Start()
     {
-        if (GameManager.Instance.forceAvailable) Destroy(gameObject);
+        if (GameManager.Instance.meleeAvailable) Destroy(gameObject);
         startPosition = transform.position;
     }
 

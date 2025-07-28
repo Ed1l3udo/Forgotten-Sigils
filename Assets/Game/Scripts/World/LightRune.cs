@@ -17,7 +17,7 @@ public class LightRune : MonoBehaviour
 
     void Start()
     {
-        if (GameManager.Instance.forceAvailable) Destroy(gameObject);
+        if (GameManager.Instance.hasNightVision) Destroy(gameObject);
         startPosition = transform.position;
     }
 

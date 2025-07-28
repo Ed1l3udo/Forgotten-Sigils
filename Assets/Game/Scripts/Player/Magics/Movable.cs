@@ -73,7 +73,11 @@ public class Movable : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (!canMove) return;
+        if (!canMove)
+        {
+            rb.linearVelocity = Vector2.zero;
+            return;
+        }
 
         if (movementDirection.sqrMagnitude > 0.01f) rb.linearVelocity = movementDirection.normalized * moveSpeed;
         else rb.linearVelocity = Vector2.zero;

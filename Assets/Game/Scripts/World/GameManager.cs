@@ -25,7 +25,8 @@ public class GameManager : MonoBehaviour
 
     void Awake()
     {
-        playerPosition = new Vector3(-120, -135, 0);
+        // playerPosition = new Vector3(-120, -135, 0);
+        playerPosition = new Vector3(0, 0, 0);
 
         if (fireAvailable) availableMagics.Add(new FireBall(fireBallPrefab, 1));
         if (windAvailable) availableMagics.Add(new WindBlast(windPrefab, 1));

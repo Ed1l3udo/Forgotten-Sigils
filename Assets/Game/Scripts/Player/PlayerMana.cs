@@ -2,11 +2,11 @@ using UnityEngine;
 
 public class PlayerMana : MonoBehaviour
 {
-    [SerializeField] private ManaUI manaPanel;
+    public ManaUI manaPanel;
     private int maxMana = 10;
     [SerializeField] public float manaRegenRate = 5f;
     private float manaRegenTimer = 0f;
-    private int currentMana;
+    public int currentMana;
 
     void Start()
     {
@@ -19,7 +19,7 @@ public class PlayerMana : MonoBehaviour
     }
 
     void RegenerateMana(){
-        if (currentMana < maxMana){
+        if (!GameManager.Instance.travarMana && currentMana < maxMana){
             manaRegenTimer += manaRegenRate * Time.deltaTime;
 
             if (manaRegenTimer >= 1f)

@@ -3,14 +3,19 @@ using TMPro;
 
 public class DialogoUIConnector : MonoBehaviour
 {
+    [Header("Referências da UI")]
+    public GameObject painelDialogo;
+    public TMP_Text textoDialogo;
+
     void Start()
     {
-        GameObject painel = GameObject.Find("PainelDialogo");
-        TMP_Text texto = GameObject.Find("TextoDialogo")?.GetComponent<TMP_Text>();
-
-        if (painel != null && texto != null && DialogoManager.Instance != null)
+        if (painelDialogo != null && textoDialogo != null && DialogoManager.Instance != null)
         {
-            DialogoManager.Instance.ConfigurarUI(painel, texto);
+            DialogoManager.Instance.ConfigurarUI(painelDialogo, textoDialogo);
+        }
+        else
+        {
+            Debug.LogError("UI de diálogo não configurada no DialogoUIConnector em " + gameObject.name);
         }
     }
 }

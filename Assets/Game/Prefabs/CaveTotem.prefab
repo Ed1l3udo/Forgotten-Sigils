@@ -102,8 +102,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -922523203
-  m_SortingLayer: 3
+  m_SortingLayerID: -2006820251
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: -5487986308646369480, guid: d2d92f082730b6b4388db75c12f675ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -130,6 +130,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftAreaDetector: {fileID: 0}
   rightAreaDetector: {fileID: 0}
+  particlePrefab: {fileID: 7559961601886544302, guid: 731069c4608b58f4e855ee4817da098b, type: 3}
   sprites:
   - {fileID: -5487986308646369480, guid: d2d92f082730b6b4388db75c12f675ea, type: 3}
   - {fileID: 5904809892720214478, guid: d2d92f082730b6b4388db75c12f675ea, type: 3}

@@ -27,8 +27,8 @@ public class GameManager : MonoBehaviour
 
     void Awake()
     {
-        playerPosition = new Vector3(-120, -135, 0); // inicio jogo
-        // playerPosition = new Vector3(0, 0, 0);
+        // playerPosition = new Vector3(-120, -135, 0); // inicio jogo
+        playerPosition = new Vector3(0, 0, 0);
         // playerPosition = new Vector3(-1f, -38f, 0); //inicio caverna
         // playerPosition = new Vector3(-20f, -60f, 0); //runa vento
 

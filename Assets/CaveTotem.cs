@@ -5,6 +5,9 @@ public class CaveTotem : MonoBehaviour
     [SerializeField] private GameObject leftAreaDetector;
     [SerializeField] private GameObject rightAreaDetector;
 
+    public GameObject particlePrefab;
+    private GameObject efeitoAtivo;
+
     private MovableAreaDetector leftDetector;
     private MovableAreaDetector rightDetector;
 
@@ -25,9 +28,22 @@ public class CaveTotem : MonoBehaviour
         {
             active = true;
             spriteRend.sprite = sprites[3];
+            if (efeitoAtivo == null) efeitoAtivo = Instantiate(particlePrefab, transform.position, Quaternion.identity);
         }
-        else if (leftDetector.active) spriteRend.sprite = sprites[1];
-        else if (rightDetector.active) spriteRend.sprite = sprites[2];
-        else spriteRend.sprite = sprites[0];
+        else if (leftDetector.active)
+        {
+            spriteRend.sprite = sprites[1];
+            if (efeitoAtivo != null) Destroy(efeitoAtivo);
+        }
+        else if (rightDetector.active)
+        {
+            spriteRend.sprite = sprites[2];
+            if (efeitoAtivo != null) Destroy(efeitoAtivo);
+        }
+        else
+        {
+            spriteRend.sprite = sprites[0];
+            if (efeitoAtivo != null) Destroy(efeitoAtivo);
+        }
     }
 }

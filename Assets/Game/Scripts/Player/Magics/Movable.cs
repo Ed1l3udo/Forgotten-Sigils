@@ -49,7 +49,7 @@ public class Movable : MonoBehaviour
         {
             playerM.canMove = false;
 
-            if (Input.GetMouseButtonDown(0) && tempoDecorrido > 2f) break;
+            if ((Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Escape)) && tempoDecorrido > 1f) break;
 
             tempoDecorrido += Time.deltaTime;
             yield return null;

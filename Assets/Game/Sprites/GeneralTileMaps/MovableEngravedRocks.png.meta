@@ -1,0 +1,1053 @@
+fileFormatVersion: 2
+guid: ed65e6f2dc3ef8f4da3bc96f422c9d63
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5434829854759512876
+    second: MovableEngravedRocks_0
+  - first:
+      213: 8506243683953455139
+    second: MovableEngravedRocks_1
+  - first:
+      213: 6381488492469709718
+    second: MovableEngravedRocks_2
+  - first:
+      213: -7547703150501150627
+    second: MovableEngravedRocks_3
+  - first:
+      213: 8234734772259163286
+    second: MovableEngravedRocks_4
+  - first:
+      213: -254214882404740022
+    second: MovableEngravedRocks_5
+  - first:
+      213: -5184737514857863199
+    second: MovableEngravedRocks_6
+  - first:
+      213: -701187198110861406
+    second: MovableEngravedRocks_7
+  - first:
+      213: -7710246478447343507
+    second: MovableEngravedRocks_8
+  - first:
+      213: -3075209424673652309
+    second: MovableEngravedRocks_9
+  - first:
+      213: -3891064381233642048
+    second: MovableEngravedRocks_10
+  - first:
+      213: 5296532614243470605
+    second: MovableEngravedRocks_11
+  - first:
+      213: 1839960566527589172
+    second: MovableEngravedRocks_12
+  - first:
+      213: -6767707105102703482
+    second: MovableEngravedRocks_13
+  - first:
+      213: 7411503137237721144
+    second: MovableEngravedRocks_14
+  - first:
+      213: 3120554273201944266
+    second: MovableEngravedRocks_15
+  - first:
+      213: -7531763365554614188
+    second: MovableEngravedRocks_16
+  - first:
+      213: -4492906391394326745
+    second: MovableEngravedRocks_17
+  - first:
+      213: 4349058990997127324
+    second: MovableEngravedRocks_18
+  - first:
+      213: -1070691205544443731
+    second: MovableEngravedRocks_19
+  - first:
+      213: 8969899228691443973
+    second: MovableEngravedRocks_20
+  - first:
+      213: 8496941098266069175
+    second: MovableEngravedRocks_21
+  - first:
+      213: -1496382809809471420
+    second: MovableEngravedRocks_22
+  - first:
+      213: -1966151700813154110
+    second: MovableEngravedRocks_23
+  - first:
+      213: -2843018530423684539
+    second: MovableEngravedRocks_24
+  - first:
+      213: -5133400139950876517
+    second: MovableEngravedRocks_25
+  - first:
+      213: -3479117727531037084
+    second: MovableEngravedRocks_26
+  - first:
+      213: 6113674243927740458
+    second: MovableEngravedRocks_27
+  - first:
+      213: -2543507965207833212
+    second: MovableEngravedRocks_28
+  - first:
+      213: -6868642862867437557
+    second: MovableEngravedRocks_29
+  - first:
+      213: -5964914775043100802
+    second: MovableEngravedRocks_30
+  - first:
+      213: 6906002771045082033
+    second: MovableEngravedRocks_31
+  - first:
+      213: 5701076662856297054
+    second: MovableEngravedRocks_32
+  - first:
+      213: -2019414957741984965
+    second: MovableEngravedRocks_33
+  - first:
+      213: 6394529124356486294
+    second: MovableEngravedRocks_34
+  - first:
+      213: -8284327346246742055
+    second: MovableEngravedRocks_35
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: MovableEngravedRocks_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 19
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2be0ab35f46c6b40800000000000000
+      internalID: 5434829854759512876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MovableEngravedRocks_1
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 79
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 320b4f2009f3c0670800000000000000
+      internalID: 8506243683953455139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MovableEngravedRocks_2
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 64
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69b66eb29f99f8850800000000000000
+      internalID: 6381488492469709718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MovableEngravedRocks_3
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 79
+        width: 20
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d50484c59fb214790800000000000000
+      internalID: -7547703150501150627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MovableEngravedRocks_4
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 78
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69c801855a7a74270800000000000000
+      internalID: 8234734772259163286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MovableEngravedRocks_5
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 78
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a44d5ad49e8d87cf0800000000000000
+      internalID: -254214882404740022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MovableEngravedRocks_6
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 63
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e7614d33bc1c08b0800000000000000
+      internalID: -5184737514857863199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MovableEngravedRocks_7
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 78
+        width: 20
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a7fc8755f1e446f0800000000000000
+      internalID: -701187198110861406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MovableEngravedRocks_8
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 78
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d688071bda3bff490800000000000000
+      internalID: -7710246478447343507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MovableEngravedRocks_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 48
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba1c4684259a255d0800000000000000
+      internalID: -3075209424673652309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MovableEngravedRocks_10
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 47
+        width: 22
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c5c46e9f89200ac0800000000000000
+      internalID: -3891064381233642048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MovableEngravedRocks_11
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 63
+        width: 19
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0dc045b950118940800000000000000
+      internalID: 5296532614243470605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MovableEngravedRocks_12
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 47
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43b7a90036ad88910800000000000000
+      internalID: 1839960566527589172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MovableEngravedRocks_13
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 63
+        width: 19
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6845778ae364412a0800000000000000
+      internalID: -6767707105102703482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MovableEngravedRocks_14
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 47
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8306fb2e5d2fad660800000000000000
+      internalID: 7411503137237721144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MovableEngravedRocks_15
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 47
+        width: 21
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac6778cf39f6e4b20800000000000000
+      internalID: 3120554273201944266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MovableEngravedRocks_16
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 63
+        width: 19
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45011dfbf1dc97790800000000000000
+      internalID: -7531763365554614188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MovableEngravedRocks_17
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 46
+        width: 19
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 727ebd3017df5a1c0800000000000000
+      internalID: -4492906391394326745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MovableEngravedRocks_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 16
+        width: 19
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c904a992c16fa5c30800000000000000
+      internalID: 4349058990997127324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MovableEngravedRocks_19
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 31
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da0836575042421f0800000000000000
+      internalID: -1070691205544443731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MovableEngravedRocks_20
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 16
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 501343de2db7b7c70800000000000000
+      internalID: 8969899228691443973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MovableEngravedRocks_21
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 31
+        width: 20
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b8019ff8e23be570800000000000000
+      internalID: 8496941098266069175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MovableEngravedRocks_22
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 16
+        width: 19
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4483e4d33c7cb3be0800000000000000
+      internalID: -1496382809809471420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MovableEngravedRocks_23
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 31
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c8708af173d6b4e0800000000000000
+      internalID: -1966151700813154110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MovableEngravedRocks_24
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 30
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5424e34a5b19b88d0800000000000000
+      internalID: -2843018530423684539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MovableEngravedRocks_25
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 15
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b98994845cf72c8b0800000000000000
+      internalID: -5133400139950876517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MovableEngravedRocks_26
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 30
+        width: 20
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46e8fb62cd0b7bfc0800000000000000
+      internalID: -3479117727531037084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MovableEngravedRocks_27
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 30
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2094cd455228d450800000000000000
+      internalID: 6113674243927740458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MovableEngravedRocks_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48519625bf4a3bcd0800000000000000
+      internalID: -2543507965207833212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MovableEngravedRocks_29
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 0
+        width: 21
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b08a3c535bdada0a0800000000000000
+      internalID: -6868642862867437557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MovableEngravedRocks_30
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 0
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7fa3169d9d583da0800000000000000
+      internalID: -5964914775043100802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MovableEngravedRocks_31
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 15
+        width: 19
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b361024eec07df50800000000000000
+      internalID: 6906002771045082033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MovableEngravedRocks_32
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 0
+        width: 19
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5aa1dee40b4e1f40800000000000000
+      internalID: 5701076662856297054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MovableEngravedRocks_33
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 0
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b33bda59bc899f3e0800000000000000
+      internalID: -2019414957741984965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MovableEngravedRocks_34
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 15
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6947823eb5eedb850800000000000000
+      internalID: 6394529124356486294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MovableEngravedRocks_35
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 0
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9df88ebbb28280d80800000000000000
+      internalID: -8284327346246742055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: a0918de1610367a47a869b81c757c2fe
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      MovableEngravedRocks_0: 5434829854759512876
+      MovableEngravedRocks_1: 8506243683953455139
+      MovableEngravedRocks_10: -3891064381233642048
+      MovableEngravedRocks_11: 5296532614243470605
+      MovableEngravedRocks_12: 1839960566527589172
+      MovableEngravedRocks_13: -6767707105102703482
+      MovableEngravedRocks_14: 7411503137237721144
+      MovableEngravedRocks_15: 3120554273201944266
+      MovableEngravedRocks_16: -7531763365554614188
+      MovableEngravedRocks_17: -4492906391394326745
+      MovableEngravedRocks_18: 4349058990997127324
+      MovableEngravedRocks_19: -1070691205544443731
+      MovableEngravedRocks_2: 6381488492469709718
+      MovableEngravedRocks_20: 8969899228691443973
+      MovableEngravedRocks_21: 8496941098266069175
+      MovableEngravedRocks_22: -1496382809809471420
+      MovableEngravedRocks_23: -1966151700813154110
+      MovableEngravedRocks_24: -2843018530423684539
+      MovableEngravedRocks_25: -5133400139950876517
+      MovableEngravedRocks_26: -3479117727531037084
+      MovableEngravedRocks_27: 6113674243927740458
+      MovableEngravedRocks_28: -2543507965207833212
+      MovableEngravedRocks_29: -6868642862867437557
+      MovableEngravedRocks_3: -7547703150501150627
+      MovableEngravedRocks_30: -5964914775043100802
+      MovableEngravedRocks_31: 6906002771045082033
+      MovableEngravedRocks_32: 5701076662856297054
+      MovableEngravedRocks_33: -2019414957741984965
+      MovableEngravedRocks_34: 6394529124356486294
+      MovableEngravedRocks_35: -8284327346246742055
+      MovableEngravedRocks_4: 8234734772259163286
+      MovableEngravedRocks_5: -254214882404740022
+      MovableEngravedRocks_6: -5184737514857863199
+      MovableEngravedRocks_7: -701187198110861406
+      MovableEngravedRocks_8: -7710246478447343507
+      MovableEngravedRocks_9: -3075209424673652309
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

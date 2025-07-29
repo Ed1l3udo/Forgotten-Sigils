@@ -13,7 +13,7 @@ public class CaveTotem : MonoBehaviour
 
     [SerializeField] private Sprite[] sprites;
     private SpriteRenderer spriteRend;
-    private bool active = false;
+    public bool active = false;
 
     void Start()
     {

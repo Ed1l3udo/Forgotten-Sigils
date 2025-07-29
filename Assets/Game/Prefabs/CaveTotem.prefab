@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5785846658033468722}
   - component: {fileID: 6338041509931804630}
   - component: {fileID: 5246129716319092176}
+  - component: {fileID: 3789975274952609666}
   m_Layer: 0
   m_Name: CaveTotem
   m_TagString: Untagged
@@ -136,3 +137,40 @@ MonoBehaviour:
   - {fileID: 5904809892720214478, guid: d2d92f082730b6b4388db75c12f675ea, type: 3}
   - {fileID: 5279362194407375095, guid: d2d92f082730b6b4388db75c12f675ea, type: 3}
   - {fileID: -1059103858459512391, guid: d2d92f082730b6b4388db75c12f675ea, type: 3}
+  active: 0
+--- !u!58 &3789975274952609666
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2102138582938355573}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.008144689, y: -0.2361962}
+  m_Radius: 0.15470764

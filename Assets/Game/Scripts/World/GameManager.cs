@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
     public bool meleeAvailable = false;
     public bool healAvailable = false;
     public bool hasNightVision = false;
+    public bool rockMoved = false;
 
     void Awake()
     {

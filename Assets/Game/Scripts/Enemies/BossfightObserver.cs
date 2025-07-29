@@ -22,6 +22,10 @@ public class BossfightObserver : MonoBehaviour
         }
 
         tamanhoDesejado = cam.orthographicSize;
+
+        GetComponent<BoxCollider2D>().enabled = true;
+
+        if (GameManager.Instance.deadOrc) Destroy(gameObject);
     }
 
     private void Update()

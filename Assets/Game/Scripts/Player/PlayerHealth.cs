@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -43,13 +44,9 @@ public class PlayerHealth : MonoBehaviour
 
     public void Die()
     {
-        transform.position = GameManager.Instance.playerPosition;
+        GameManager.Instance.playerPosition = GameManager.Instance.checkpoint;
+        if(SceneManager.GetActiveScene().name != GameManager.Instance.checkpointScene) SceneManager.LoadScene(GameManager.Instance.checkpointScene);
         currentHealth = maxHealth;
         HealthPanel.UpdateUI(currentHealth);
-        if (kingOrc != null)
-        {
-            KingOrc kingOrcScript = kingOrc.GetComponent<KingOrc>();
-            kingOrcScript.DeadPlayer();
-        }
     }
 }

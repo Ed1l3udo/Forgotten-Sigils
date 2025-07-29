@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour
     public int playerMaxMana = 27;
     public int playerCurrentMana;
     [SerializeField] public Vector3 playerPosition;
+    public Vector3 checkpoint;
+    public string checkpointScene = "StartingArea";
     public GameObject fireBallPrefab;
     public GameObject windPrefab;
     public GameObject forceBallPrefab;
@@ -30,6 +32,8 @@ public class GameManager : MonoBehaviour
 
     void Awake()
     {
+        checkpoint = new Vector3(-120, -135, 0);
+
         playerPosition = new Vector3(-120, -135, 0); // inicio jogo
         // playerPosition = new Vector3(0, 0, 0);
         // playerPosition = new Vector3(-1f, -38f, 0); //inicio caverna

@@ -17,6 +17,10 @@ public class PlayerMovement : MonoBehaviour
     private float dashPower = 24f;
     private float dashTime = 0.2f;
     public float dashCooldown = 3f;
+    
+    private float stepTimer = 0f;
+    private float stepDelay = 0.4f; 
+    private bool pisouEsquerda = true;
 
     void Start()
     {
@@ -57,13 +61,36 @@ public class PlayerMovement : MonoBehaviour
         rb.linearVelocity = playerMovementDirection.normalized * playerMoveSpeed;
     }
 
-
     void MovePlayer()
     {
-        // Entrada do jogador (WASD ou setas)
-        playerMovementDirection.x = Input.GetAxisRaw("Horizontal"); // Pega a entrada A/D e retorna 1(D) -1(A) ou 0 (nada) 
-        playerMovementDirection.y = Input.GetAxisRaw("Vertical"); // Pega a entrada W/S e retorna 1 (W) -1 (S) ou 0 (nada)
+        // Entrada do jogador
+        playerMovementDirection.x = Input.GetAxisRaw("Horizontal");
+        playerMovementDirection.y = Input.GetAxisRaw("Vertical");
+
+        // Verifica se está se movendo em qualquer direção
+        if (playerMovementDirection.sqrMagnitude > 0.01f)
+        {
+            stepTimer -= Time.deltaTime;
+
+            if (stepTimer <= 0f)
+            {
+                if (pisouEsquerda)
+                    SoundManager.Instance.PlayPassoEsquerda();
+                else
+                    SoundManager.Instance.PlayPassoDireita();
+
+                pisouEsquerda = !pisouEsquerda;
+                stepTimer = stepDelay;
+            }
+        }
+        else
+        {
+            // Se parou de andar, reseta o timer e volta para o "passo esquerdo"
+            stepTimer = 0f;
+            pisouEsquerda = true;
+        }
     }
+
 
     void AdjustSprite()
     {
@@ -93,6 +120,7 @@ public class PlayerMovement : MonoBehaviour
         Debug.Log("Dashing");
         trailRenderer.emitting = true;
         Invoke(nameof(DisableTrail), 0.2f);
+        SoundManager.Instance.PlaySomDash();
         canDash = false;
         isDashing = true;
         rb.linearVelocity = playerMovementDirection.normalized * dashPower;

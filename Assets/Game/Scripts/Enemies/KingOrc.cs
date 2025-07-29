@@ -111,6 +111,7 @@ public class KingOrc : Damageable
         }
 
         animator.SetTrigger("Summon");
+        SoundManager.Instance.PlayBossSummon();
 
         yield return new WaitForSeconds(0.850f);
 
@@ -124,6 +125,8 @@ public class KingOrc : Damageable
         isAttacking = true;
 
         Vector3 spawnPosition = transform.position + (Vector3)direction.normalized;
+
+        SoundManager.Instance.PlayBossAtaque();
 
         GameObject slash = Instantiate(slashPrefab, spawnPosition, Quaternion.identity);
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
@@ -147,6 +150,7 @@ public class KingOrc : Damageable
         isPreparingDash = false;
         isDashing = true;
         dashTimeLeft = dashDuration;
+        SoundManager.Instance.PlayBossAtaque();
     }
 
     private void DashMovement()
@@ -215,14 +219,14 @@ public class KingOrc : Damageable
         animator.SetBool("Aggro", true);
     }
 
-    public void DeadPlayer()
-    {
-        aggro = false;
-        animator.SetBool("Aggro", false);
-        transform.position = new Vector3(-5, 64, 0);
-        currentHealth = maxHealth;
-        observer.GetComponent<BoxCollider2D>().enabled = true;
-    }
+    // public void DeadPlayer()
+    // {
+    //     aggro = false;
+    //     animator.SetBool("Aggro", false);
+    //     transform.position = new Vector3(-5, 64, 0);
+    //     currentHealth = maxHealth;
+    //     observer.GetComponent<BoxCollider2D>().enabled = true;
+    // }
 
     private void Die()
     {

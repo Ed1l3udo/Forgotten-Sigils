@@ -51,7 +51,10 @@ public class PlayerMagics : MonoBehaviour
 
                     playerMana.UseMana(availableMagics[currentMagicIndex].ManaCost);
                     availableMagics[currentMagicIndex].Cast(transform, mouseWorldPosition);
-
+                    
+                    if (currentMagicIndex == 0) SoundManager.Instance.PlaySomFogo();
+                    else if (currentMagicIndex == 1) SoundManager.Instance.PlaySomVento();
+                    else SoundManager.Instance.PlaySomForce();
                 }
                 else
                 {

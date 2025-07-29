@@ -5,7 +5,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
 
     // Dados do jogador
-    public int playerMaxHealth = 5;
+    public int playerMaxHealth = 4;
     public int playerCurrentHealth;
     public int playerMaxMana = 27;
     public int playerCurrentMana;
@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     public List<BaseMagic> availableMagics;
     public bool grassHasBeenBroken = false;
     public bool caveWallHasBeenBroken = false;
+    public bool runaAppeared = false;
     public bool fireAvailable = false;
     public bool windAvailable = false;
     public bool forceAvailable = false;
@@ -29,11 +30,11 @@ public class GameManager : MonoBehaviour
 
     void Awake()
     {
-        // playerPosition = new Vector3(-120, -135, 0); // inicio jogo
+        playerPosition = new Vector3(-120, -135, 0); // inicio jogo
         // playerPosition = new Vector3(0, 0, 0);
         // playerPosition = new Vector3(-1f, -38f, 0); //inicio caverna
         // playerPosition = new Vector3(-20f, -60f, 0); //runa vento
-        playerPosition = new Vector3(-200f, -35f, 0); // inicio orcs
+        // playerPosition = new Vector3(-200f, -35f, 0); // inicio orcs
 
 
         if (fireAvailable) availableMagics.Add(new FireBall(fireBallPrefab, 1));

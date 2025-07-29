@@ -184,7 +184,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      MovableSmallRocks_0: -3776708758931826628
+      MovableSmallRocks_1: 7576631216872867672
+      MovableSmallRocks_2: -2941034957512210380
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

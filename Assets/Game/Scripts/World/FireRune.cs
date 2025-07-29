@@ -10,7 +10,6 @@ public class FireRune : MonoBehaviour
     private bool playerNearby = false;
     private GameObject playerRef;
     public string[] falas;
-    private DialogoManager dialogoManager;
     public int fireBallManaCost = 3;
     public float floatHeight = 0.5f;
     public float floatSpeed = 2f;

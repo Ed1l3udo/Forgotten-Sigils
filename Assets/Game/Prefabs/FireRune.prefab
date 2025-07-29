@@ -280,6 +280,12 @@ MonoBehaviour:
   fireBallPrefab: {fileID: 4240184731516300625, guid: 3c19c7e49c1d0c946b21bb3cabb2d8f4, type: 3}
   runesUI: {fileID: 0}
   interactionMessage: {fileID: 1292278497046033708}
+  falas:
+  - "A est\xE1tua guardi\xE3 s\xF3 concede a habilidade de ler as runas perdidas
+    para aqueles dignos. Somente os que recebem o dom de Velyrien, a l\xEDngua dos
+    magos ancestrais, podem dominar as antigas magias esquecidas."
+  - Permita que as chamas sagradas ardam na sua alma.
+  - "Khal\u2019rein, thazar vael\u2019yn"
   fireBallManaCost: 3
   floatHeight: 0.5
   floatSpeed: 2

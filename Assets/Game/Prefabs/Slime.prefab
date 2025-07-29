@@ -420,7 +420,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5e710560aa80e84c9b5154475c7555c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerGameObject: {fileID: 0}
+  playerGameObject: {fileID: 8507051341424840019, guid: 2f687720fc7663146a39d49bb4d3b1ca, type: 3}
   target: {fileID: 0}
   enemyGFX: {fileID: 5821990223816040623}
   speed: 300

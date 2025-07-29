@@ -17,21 +17,17 @@ public class Spawner : MonoBehaviour
     public int maxMonstrosVivos = 10;
     public float distanciaMinima = 15f;
 
-    private Vector2 areaMinima;
-
     private List<GameObject> monstrosVivos = new List<GameObject>();
 
     public GameObject player;
 
     private void Start()
     {
-        // Spawn inicial
         for (int i = 0; i < quantidadeInicial; i++)
         {
             SpawnMonster();
         }
 
-        // Inicia spawn contínuo com tempo aleatório
         StartCoroutine(SpawnLoop());
     }
 
@@ -47,23 +43,51 @@ public class Spawner : MonoBehaviour
 
     void SpawnMonster()
     {
+        // Checa se o player está perto o suficiente do spawner
         float distanciaDoPlayer = Vector2.Distance(transform.position, player.transform.position);
-        
         if (distanciaDoPlayer > distanciaMinima) return;
 
+        // Remove monstros mortos da lista
         monstrosVivos.RemoveAll(monster => monster == null);
 
         if (monstrosVivos.Count >= maxMonstrosVivos)
             return;
 
-        Vector2 spawnPosition = (Vector2)transform.position + new Vector2(
-            Random.Range(-areaSize.x / 2, areaSize.x / 2),
-            Random.Range(-areaSize.y / 2, areaSize.y / 2)
-        );
+        // Tenta encontrar uma posição válida fora da câmera
+        Vector2 spawnPosition;
+        int tentativas = 10;
+        bool posicaoValida = false;
+
+        do
+        {
+            spawnPosition = (Vector2)transform.position + new Vector2(
+                Random.Range(-areaSize.x / 2, areaSize.x / 2),
+                Random.Range(-areaSize.y / 2, areaSize.y / 2)
+            );
+
+            if (!IsPositionInsideCamera(spawnPosition))
+            {
+                posicaoValida = true;
+                break;
+            }
+
+            tentativas--;
+        } while (tentativas > 0);
+
+        if (!posicaoValida) return;
 
         GameObject novoMonstro = Instantiate(monsterPrefab, spawnPosition, Quaternion.identity);
-
         monstrosVivos.Add(novoMonstro);
+    }
+
+    bool IsPositionInsideCamera(Vector2 position)
+    {
+        Camera cam = Camera.main;
+        if (cam == null) return false;
+
+        Vector3 viewportPoint = cam.WorldToViewportPoint(position);
+
+        return viewportPoint.z > 0 && viewportPoint.x >= 0 && viewportPoint.x <= 1 && viewportPoint.y >= 0 && viewportPoint.y <= 1;
     }
 
     private void OnDrawGizmosSelected()
@@ -72,7 +96,6 @@ public class Spawner : MonoBehaviour
         Gizmos.DrawWireCube(transform.position, areaSize);
 
         Gizmos.color = Color.red;
-        Gizmos.DrawWireCube(transform.position, new Vector3(distanciaMinima, distanciaMinima, 0f));
+        Gizmos.DrawWireSphere(transform.position, distanciaMinima);
     }
-
 }

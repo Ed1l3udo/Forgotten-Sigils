@@ -142,7 +142,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -922523203
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 3459547899722000283, guid: 9ff36e9bb754fed42952122849b49c6e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -168,8 +168,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathEffect: {fileID: 0}
+  knockedBack: 0
   maxHealth: 30
-  speed: 5
+  speed: 4
   damage: 0
   slashPrefab: {fileID: 0}
   playerGameObject: {fileID: 0}

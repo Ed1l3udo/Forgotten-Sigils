@@ -5,6 +5,7 @@ public class PlayerHealth : MonoBehaviour
 {
     [SerializeField] private HealthUI HealthPanel;
     [SerializeField] private int maxHealth;
+    [SerializeField] private GameObject kingOrc;
     private int currentHealth;
     public bool foiAtacadoDuranteCura = false;
 
@@ -42,6 +43,13 @@ public class PlayerHealth : MonoBehaviour
 
     public void Die()
     {
-        // a ser implementado
+        transform.position = GameManager.Instance.playerPosition;
+        currentHealth = maxHealth;
+        HealthPanel.UpdateUI(currentHealth);
+        if (kingOrc != null)
+        {
+            KingOrc kingOrcScript = kingOrc.GetComponent<KingOrc>();
+            kingOrcScript.DeadPlayer();
+        }
     }
 }

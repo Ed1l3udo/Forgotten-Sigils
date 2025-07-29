@@ -3,7 +3,7 @@ using System.Collections;
 
 public class KingOrc : Damageable
 {
-    [SerializeField] private int maxHealth = 200;
+    [SerializeField] public int maxHealth = 200;
     [SerializeField] private float speed = 3f;
     [SerializeField] private int damage = 20;
     [SerializeField] private GameObject slashPrefab;
@@ -15,9 +15,10 @@ public class KingOrc : Damageable
     [SerializeField] private float dashDuration = 0.3f;
     [SerializeField] private float dashDelay = 0.5f; // tempo antes de iniciar o dash real
     [SerializeField] private GameObject summonEffectPrefab;
+    public GameObject observer;
 
 
-    private int currentHealth;
+    public int currentHealth;
     private Transform player;
     private Animator animator;
     private bool isAttacking = false;
@@ -28,7 +29,7 @@ public class KingOrc : Damageable
     private bool isPreparingDash = false;
     private Vector2 direction;
     private Rigidbody2D rb;
-    [SerializeField] private bool aggro = true;
+    [SerializeField] public bool aggro = false;
 
     private void Start()
     {
@@ -38,11 +39,14 @@ public class KingOrc : Damageable
         rb = GetComponent<Rigidbody2D>();
         minionSpawnTimer = 0f;
         dashTimer = 0f;
-        if (aggro) animator.SetBool("Aggro", true);
+
+        if (GameManager.Instance.deadOrc) Destroy(gameObject);
     }
 
     private void Update()
     {
+        if (!aggro) return;
+
         direction = player.position - transform.position;
         AdjustSprite(direction);
 
@@ -119,11 +123,11 @@ public class KingOrc : Damageable
 
         isAttacking = true;
 
-        // Vector3 spawnPosition = transform.position + (Vector3)(direction.normalized * offsetDistance);
+        Vector3 spawnPosition = transform.position + (Vector3)direction.normalized;
 
-        // GameObject slash = Instantiate(slashPrefab, spawnPosition, Quaternion.identity);
-        // float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        // slash.transform.rotation = Quaternion.Euler(0, 0, angle);
+        GameObject slash = Instantiate(slashPrefab, spawnPosition, Quaternion.identity);
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        slash.transform.rotation = Quaternion.Euler(0, 0, angle);
 
         yield return new WaitForSeconds(0.667f);
 
@@ -205,15 +209,25 @@ public class KingOrc : Damageable
         }
     }
 
-    // public void StartFight()
-    // {
-    //     aggro = true;
-    //     animator.SetBool("Aggro", true);
-    // }
+    public void StartFight()
+    {
+        aggro = true;
+        animator.SetBool("Aggro", true);
+    }
+
+    public void DeadPlayer()
+    {
+        aggro = false;
+        animator.SetBool("Aggro", false);
+        transform.position = new Vector3(-5, 64, 0);
+        currentHealth = maxHealth;
+        observer.GetComponent<BoxCollider2D>().enabled = true;
+    }
 
     private void Die()
     {
         animator.SetTrigger("Die");
         Destroy(gameObject, 2f); // Tempo para a animação
+        GameManager.Instance.deadOrc = true;
     }
 }

@@ -47,7 +47,7 @@ public class MeleeRune : MonoBehaviour
             }
             else
             {
-                DialogoManager.Instance.IniciarDialogo(falas);
+                DialogoManager.Instance.IniciarDialogo(falasSemluz);
             }
         }
     }

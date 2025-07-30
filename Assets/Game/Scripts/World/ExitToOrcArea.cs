@@ -7,7 +7,7 @@ public class ExitToOrcArea : MonoBehaviour
 
     void OnTriggerEnter2D()
     {
-        GameManager.Instance.playerPosition = new Vector3 (0f, -15f, 0f);
+        GameManager.Instance.playerPosition = new Vector3 (-193f, -38f, 0f);
         SceneManager.LoadScene(nextScene);
     }
 }

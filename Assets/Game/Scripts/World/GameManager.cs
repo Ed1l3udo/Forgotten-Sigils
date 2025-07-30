@@ -40,9 +40,9 @@ public class GameManager : MonoBehaviour
     {
  
 
-        // playerPosition = new Vector3(-120, -135, 0); // inicio jogo
+        playerPosition = new Vector3(-120, -135, 0); // inicio jogo
         // playerPosition = new Vector3(0, 0, 0);
-        playerPosition = new Vector3(-1f, -60f, 0); //inicio caverna
+        // playerPosition = new Vector3(-1f, -60f, 0); //inicio caverna
         // playerPosition = new Vector3(-20f, -60f, 0); //runa vento
         // playerPosition = new Vector3(-200f, -35f, 0); // inicio orcs
 

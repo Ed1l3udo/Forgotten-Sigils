@@ -12,7 +12,7 @@ public class CameraFollow : MonoBehaviour
         // Calcula a distância inicial entre a câmera e o jogador
         if (target != null)
         {
-            offset = transform.position - target.position;
+            offset = transform.position - GameManager.Instance.playerPosition;
         }
     }
 

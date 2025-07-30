@@ -6,7 +6,7 @@ public class Heal : BaseMagic
     private MonoBehaviour casterMono;
     private GameObject healParticlePrefab;
     private float healAmount = 1f;
-    private float channelDuration = 3f;
+    private float channelDuration = 2f;
     private bool isHealing = false;
 
     public Heal(MonoBehaviour mono, int manaCost, GameObject particlePrefab) : base(manaCost)

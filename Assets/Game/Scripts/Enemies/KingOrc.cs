@@ -127,6 +127,7 @@ public class KingOrc : Damageable
         Vector3 spawnPosition = transform.position + (Vector3)direction.normalized;
 
         SoundManager.Instance.PlayBossAtaque();
+        SoundManager.Instance.PlaySomSlash();
 
         GameObject slash = Instantiate(slashPrefab, spawnPosition, Quaternion.identity);
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;

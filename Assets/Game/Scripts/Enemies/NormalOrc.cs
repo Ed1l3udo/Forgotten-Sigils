@@ -104,6 +104,8 @@ public class NormalOrc : Damageable
 
         isAttacking = true;
 
+        SoundManager.Instance.PlaySomSlash();
+
         // Vector3 spawnPosition = transform.position + (Vector3)(direction.normalized * offsetDistance);
 
         // GameObject slash = Instantiate(slashPrefab, spawnPosition, Quaternion.identity);

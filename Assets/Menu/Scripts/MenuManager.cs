@@ -27,7 +27,6 @@ public class MenuManager : MonoBehaviour
 
     public void Play()
     {
-        GameManager.Instance.playerPosition = new Vector3(-100f, -58f, 0f);
         SceneManager.LoadScene(playingScene);
     }
 

@@ -16,6 +16,10 @@ public class SoundManager : MonoBehaviour
     public AudioClip somVento;
     public AudioClip passoDireita;
     public AudioClip passoEsquerda;
+    public AudioClip somLog;
+    public AudioClip somLetra;
+    public AudioClip somCura;
+    public AudioClip somSlash;
 
     [Header("Clips do Boss")]
     public AudioClip somSummon;
@@ -110,4 +114,8 @@ public class SoundManager : MonoBehaviour
     public void PlayPassoEsquerda() => PlaySFX(passoEsquerda);
     public void PlayBossSummon() => PlaySFX(somSummon);
     public void PlayBossAtaque() => PlaySFX(somAtaque);
+    public void PlaySomLog() => PlaySFX(somLog);
+    public void PlaySomCura() => PlaySFX(somCura);
+    public void PlaySomSlash() => PlaySFX(somSlash);
+    public void PlaySomLetra() => PlaySFX(somLetra);
 }

@@ -54,6 +54,7 @@ public class PlayerHealth : MonoBehaviour
         //     Debug.LogWarning("Menu de Morte não atribuído!");
         // }
         GameManager.Instance.Resetar();
+        GameManager.Instance.playerPosition = new Vector3(-120, -135, 0);
         SceneManager.LoadScene("Menu");
     }   
 }

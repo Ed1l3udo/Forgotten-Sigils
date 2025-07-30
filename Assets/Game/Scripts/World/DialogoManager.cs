@@ -92,8 +92,7 @@ public class DialogoManager : MonoBehaviour
         foreach (char letra in texto.ToCharArray())
         {
             textoDialogo.text += letra;
-            // Exemplo: som de "blip" por letra
-            // AudioManager.Play("blip");
+            SoundManager.Instance.PlaySomLetra();
             yield return new WaitForSeconds(tempoEntreLetras);
         }
 

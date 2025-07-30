@@ -102,6 +102,8 @@ public class Log : Damageable
         {
             if (player == null) yield break;
 
+            SoundManager.Instance.PlaySomLog();
+
             // Calcular direção até o player
             Vector2 direction = (player.position - transform.position).normalized;
 

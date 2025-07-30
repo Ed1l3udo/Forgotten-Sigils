@@ -50,6 +50,10 @@ MonoBehaviour:
   somVento: {fileID: 8300000, guid: c8d42ab28a40c0248b238aa793a5c940, type: 3}
   passoDireita: {fileID: 8300000, guid: a4f677f7f929e464fa525fe06ca3939d, type: 3}
   passoEsquerda: {fileID: 8300000, guid: 8a92f8630154c8f478cd8c426864c0bc, type: 3}
+  somLog: {fileID: 8300000, guid: e0797d71d379f584292d33b0b8d8ccdc, type: 3}
+  somLetra: {fileID: 8300000, guid: d961eace18a4df14cb6c5f1bee3b73f6, type: 3}
+  somCura: {fileID: 8300000, guid: be771e8c0851a7b4db12e74bec99b1b2, type: 3}
+  somSlash: {fileID: 8300000, guid: fd841bba8aed81446b23507b8a2d41fb, type: 3}
   somSummon: {fileID: 8300000, guid: 39da5abde882eea44bccfbd307b9ca38, type: 3}
   somAtaque: {fileID: 8300000, guid: be0fdd610fc53d5489f0f60dd02c5410, type: 3}
   sfxVolume: 0.541

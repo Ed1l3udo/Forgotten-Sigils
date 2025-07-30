@@ -8,6 +8,7 @@ public class LightRune : MonoBehaviour
     public RunesUI runesUI;
     public GameObject interactionMessage;
     private bool playerNearby = false;
+    private PlayerMovement playerScript;
     private GameObject playerRef;
     public string[] falas;
     private DialogoManager dialogoManager;
@@ -40,8 +41,10 @@ public class LightRune : MonoBehaviour
         {
             if (interactionMessage != null)
                 interactionMessage.SetActive(false);
+            playerScript.canMove = false;
             DialogoManager.Instance.IniciarDialogo(falas, ActivateRune);
             ativado = true; // impede reativar
+            
         }
     }
 
@@ -51,6 +54,7 @@ public class LightRune : MonoBehaviour
         {
             playerNearby = true;
             playerRef = other.gameObject;
+            playerScript = other.GetComponent<PlayerMovement>();
 
             // Exibir mensagem de interação
             if (interactionMessage != null)
@@ -97,5 +101,6 @@ public class LightRune : MonoBehaviour
         if (particleEffect != null) efeitoAtivo = Instantiate(particleEffect, transform.position, Quaternion.identity);
         if (interactionMessage != null) interactionMessage.SetActive(false);
         runesUI.UpdateRunes();
+        playerScript.canMove = true;
     }
 }

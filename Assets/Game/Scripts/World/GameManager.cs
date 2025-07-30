@@ -38,11 +38,11 @@ public class GameManager : MonoBehaviour
 
     void Awake()
     {
-        checkpoint = new Vector3(-120, -135, 0);
+ 
 
-        // playerPosition = new Vector3(-120, -135, 0); // inicio jogo
+        playerPosition = new Vector3(-120, -135, 0); // inicio jogo
         // playerPosition = new Vector3(0, 0, 0);
-        playerPosition = new Vector3(-1f, -60f, 0); //inicio caverna
+        // playerPosition = new Vector3(-1f, -60f, 0); //inicio caverna
         // playerPosition = new Vector3(-20f, -60f, 0); //runa vento
         // playerPosition = new Vector3(-200f, -35f, 0); // inicio orcs
 
@@ -65,4 +65,38 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject); // Evita duplicação
         }
     }
+
+    public void Resetar()
+    {
+        // Reset de vida e mana
+        playerCurrentHealth = playerMaxHealth;
+        playerCurrentMana = playerMaxMana;
+
+
+        // Reset das magias
+        availableMagics = new List<BaseMagic>();
+
+        if (fireAvailable) availableMagics.Add(new FireBall(fireBallPrefab, 1));
+        if (windAvailable) availableMagics.Add(new WindBlast(windPrefab, 1));
+        if (forceAvailable) availableMagics.Add(new Force(forceBallPrefab, 1));
+
+        // Reset de flags
+        fireAvailable = false;
+        windAvailable = false;
+        forceAvailable = false;
+        dashAvailable = false;
+        meleeAvailable = false;
+        healAvailable = false;
+        hasNightVision = false;
+        grassHasBeenBroken = false;
+        caveWallHasBeenBroken = false;
+        runaAppeared = false;
+        rockMoved = false;
+        deadOrc = false;
+        preHealRune = false;
+        preBreakableWall = false;
+        salaLuz = false;
+        travarMana = false;
+    }
+
 }

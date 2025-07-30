@@ -7,6 +7,7 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private HealthUI HealthPanel;
     [SerializeField] private int maxHealth;
     [SerializeField] private GameObject kingOrc;
+    // public GameObject menuMorte;
     private int currentHealth;
     public bool foiAtacadoDuranteCura = false;
 
@@ -30,7 +31,7 @@ public class PlayerHealth : MonoBehaviour
         
         foiAtacadoDuranteCura = true;
 
-        if (currentHealth == 0) Die();
+        if (currentHealth < 1) Die();
     }
 
     public void Heal(int healing)
@@ -44,9 +45,15 @@ public class PlayerHealth : MonoBehaviour
 
     public void Die()
     {
-        GameManager.Instance.playerPosition = GameManager.Instance.checkpoint;
-        if(SceneManager.GetActiveScene().name != GameManager.Instance.checkpointScene) SceneManager.LoadScene(GameManager.Instance.checkpointScene);
-        currentHealth = maxHealth;
-        HealthPanel.UpdateUI(currentHealth);
-    }
+        // if (menuMorte != null)
+        // {
+        //     menuMorte.GetComponent<GameOverMenu>().AtivarMenuDeMorte();
+        // }
+        // else
+        // {
+        //     Debug.LogWarning("Menu de Morte não atribuído!");
+        // }
+        GameManager.Instance.Resetar();
+        SceneManager.LoadScene("Menu");
+    }   
 }

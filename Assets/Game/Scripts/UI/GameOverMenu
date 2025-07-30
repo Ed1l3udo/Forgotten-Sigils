@@ -1,0 +1,25 @@
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class GameOverMenu : MonoBehaviour
+{
+    public GameObject painelMorte;
+
+    void Start()
+    {
+        painelMorte.SetActive(false); // Esconde no início
+    }
+
+    public void AtivarMenuDeMorte()
+    {
+        painelMorte.SetActive(true);
+        Time.timeScale = 0f; // Congela o jogo
+    }
+
+    public void VoltarParaMenu()
+    {
+        Time.timeScale = 1f; // Descongela o jogo
+        GameManager.Instance.Resetar();
+        SceneManager.LoadScene("MenuPrincipal"); // Altere pelo nome real
+    }
+}

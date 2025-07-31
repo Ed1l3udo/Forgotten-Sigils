@@ -9,7 +9,7 @@ public class PlayerNightVision : MonoBehaviour
     {
         if (GameManager.Instance.hasNightVision)
         {
-            playerLight.pointLightOuterRadius = 7;
+            playerLight.pointLightOuterRadius = 10;
         }
         else
         {

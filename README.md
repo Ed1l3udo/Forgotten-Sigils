@@ -1,58 +1,118 @@
-# ✨ Forgotten Sigils
+# Forgotten Sigils
 
-**Forgotten Sigils** é um pequeno RPG 2D top-down desenvolvido na Unity.  
-Você controla um viajante que explora terras antigas, derrota criaturas hostis e coleta **Sigils** - runas esquecidas que concedem poderes mágicos capazes de eliminar inimigos ou abrir caminhos durante sua jornada.
+Forgotten Sigils is a 2D top-down action-adventure RPG prototype built with Unity and C#. Progression centers on discovering Sigils—runes that unlock combat abilities, movement options, and new ways to interact with the environment.
 
-Este é um projeto inteiramente construído em **Unity + C#**.
+<p align="center">
+  <img src="docs/images/forgotten-sigils-boss-fight.png" alt="The player uses a spell while fighting the King Orc and summoned enemies" width="100%">
+</p>
 
----
+## Overview
 
-## 🪄 Premissa
+Explore an overworld of ruins and hostile creatures before descending into a dark cave. Along the way, collected Sigils expand the player's toolkit: they provide ranged spells, melee combat, healing, a dash, improved visibility, and abilities used to clear or manipulate obstacles.
 
-Em um mundo apagado pela passagem do tempo, fragmentos de magia permanecem escondidos em forma de runas chamadas **Sigils**.  
-Cada sigil encontrado permite ao jogador aprender novos feitiços, essenciais para:
+The project is a playable learning prototype focused on connecting exploration, combat, environmental puzzles, and persistent progression across multiple areas.
 
-- Enfrentar monstros
-- Resolver obstáculos ambientais
-- Progredir pelo mapa
-- Descobrir segredos
+## Gameplay
 
+- Explore tilemap-based outdoor and cave environments across interconnected scenes.
+- Discover seven Sigils: Fire, Wind, Force, Dash, Heal, Light, and Melee.
+- Aim spells with the mouse, cycle between unlocked spells, and manage regenerating mana.
+- Fight slimes, charging log creatures, multiple orc variants, and a King Orc boss that can dash and summon minions.
+- Use abilities outside combat to clear grass, break cave walls, move engraved rocks, activate totems, and illuminate dark areas.
+- Track health, mana, unlocked runes, and dash cooldown through the in-game HUD.
 
----
+## Screenshots
 
-## 🖼️ Algumas Capturas de Tela
-<img width="679" height="426" alt="image" src="https://github.com/user-attachments/assets/dc2160c5-1e2f-4207-b8ad-bf3366fb12f5" />
-<img width="1365" height="767" alt="image" src="https://github.com/user-attachments/assets/cd6a4b15-9dc3-49e7-bea6-b6f207470237" />
-<img width="1365" height="759" alt="image" src="https://github.com/user-attachments/assets/cedcfa06-49b0-4333-93e1-dfc34d341e2e" />
+<table>
+  <tr>
+    <td width="50%">
+      <img src="docs/images/forgotten-sigils-wind-sigil.png" alt="The player approaching the Wind Sigil in the overworld">
+      <br><sub>Discovering a Sigil in the overworld</sub>
+    </td>
+    <td width="50%">
+      <img src="docs/images/forgotten-sigils-slimes.png" alt="The player exploring near a group of slimes">
+      <br><sub>Overworld exploration and slime enemies</sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <img src="docs/images/forgotten-sigils-cave-puzzle.png" alt="A movable engraved rock puzzle inside the cave">
+      <br><sub>Force-based rock puzzle</sub>
+    </td>
+    <td width="50%">
+      <img src="docs/images/forgotten-sigils-cave-totem.png" alt="An activated stone totem inside the cave">
+      <br><sub>Activated cave totem and 2D lighting</sub>
+    </td>
+  </tr>
+</table>
 
+## Controls
 
+| Action | Input |
+| --- | --- |
+| Move | `WASD` or arrow keys |
+| Aim | Mouse cursor |
+| Cast selected spell | Left mouse button |
+| Select previous / next spell | `Q` / `E` |
+| Melee attack (after unlocking) | Right mouse button |
+| Interact / collect a Sigil | `R` |
+| Dash (after unlocking) | Left `Shift` |
+| Channel healing (after unlocking) | Hold `F` |
+| Advance dialogue | `E` |
+| Release a Force-controlled object | Left mouse button or `Esc` |
 
----
+## Technical Highlights
 
-## 🎮 Gameplay
+- **Reusable ability model:** a shared `BaseMagic` abstraction supports targeted abilities with individual mana costs and casting behavior; unlocks are reflected in both the player controller and rune HUD.
+- **Persistent scene state:** a `DontDestroyOnLoad` game manager carries player position, health, mana, unlocked abilities, defeated encounters, and environmental changes between areas.
+- **Combat and enemy behaviors:** reusable damage handling is combined with physics, animation, knockback, proximity aggro, charging enemies, timed spawning, and a multi-action boss encounter.
+- **Ability-driven environment:** spells interact with 2D physics and tilemaps to remove obstacles, control movable rocks, solve detector-and-totem puzzles, and reveal dark spaces.
+- **Player feedback systems:** heart and segmented mana displays, rune selection, dash cooldown, typewriter dialogue, particles, sound effects, and camera transitions communicate game state.
 
-- Visão **2D top-down**
-- Combate simples e direto
-- Sistema de magias únicas baseado em Sigils coletados pelo mundo
-- Exploração contínua de cenários e inimigos
-- Progresso através da aquisição de novas runas/poderes
+## Built With
 
----
+- Unity `6000.0.84f1`
+- C#
+- Universal Render Pipeline with the 2D Renderer and `Light2D`
+- Unity 2D physics, Tilemaps, Animator, and Particle System
+- Unity UI and TextMesh Pro
+- Unity Input Manager APIs for runtime controls
 
-## 🛠️ Tecnologias Utilizadas
+## Scenes
 
-- **Unity** (versão 6000.0.45f1)
-- **C#**
-- Sprites e assets em 2D
-- Sistema de input da Unity
+```text
+Menu  →  StartingArea  ↔  Cave
+```
 
----
+- **Menu** — start screen and persistent audio settings; begins the game in `StartingArea`.
+- **StartingArea** — overworld exploration, early Sigils, enemy encounters, environmental obstacles, and the orc boss area.
+- **Cave** — low-light dungeon containing movable-rock and totem puzzles, destructible paths, additional Sigils, and exits back to the overworld.
 
-## 🚀 Como Rodar o Projeto
+## Running Locally
 
-1. Clone o repositório:
+1. Clone the repository:
+
    ```bash
-   git clone https://github.com/SEU_USUARIO/ForgottenSigils.git
-2. Abra a pasta do projeto diretamente na Unity Hub.
-3. Certifique-se de estar usando a mesma versão da Unity (ou superior) que o projeto usa.
-4. Clique em Play no Editor.
+   git clone https://github.com/Ed1l3udo/Forgotten-Sigils.git
+   cd Forgotten-Sigils
+   ```
+
+2. Install Unity `6000.0.84f1` through Unity Hub.
+3. Add the cloned directory as an existing project and open it with that exact editor version.
+4. Open `Assets/Scenes/Menu.unity`.
+5. Enter Play Mode.
+
+## Project Status
+
+Forgotten Sigils is a learning project and gameplay prototype, not a finished game. Its implemented loop demonstrates exploration, ability-based progression, combat, puzzles, scene transitions, UI, audio, and 2D lighting.
+
+## Credits
+
+Repository history records project contributions from [Ed1l3udo](https://github.com/Ed1l3udo) and [Gabriel Matias de Almeida](https://github.com/mgabrielalmeida). Individual roles are not documented clearly enough to assign ownership of specific disciplines or assets.
+
+Third-party resources with attribution included in the repository:
+
+- LPC-derived terrain tiles and contributors — see the [included attribution](Assets/Game/Sprites/lpc-tileset-16x16/attribution.txt) and [LPC terrain credits](Assets/Game/Sprites/lpc-tileset-16x16/LPC_Terrain_Attribution.txt).
+- Press Start 2P — licensed under the [SIL Open Font License 1.1](Assets/Fonts/Press%20Start%202P/OFL.txt).
+- LeanTween by Dented Pixel — used for menu selection animation and distributed under its [included license](Assets/Others/LeanTween/License.txt).
+- A* Pathfinding Project by Aron Granberg — bundled with its [included project notice](Assets/AstarPathfindingProject/Readme.txt).

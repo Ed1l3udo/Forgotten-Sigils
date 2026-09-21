@@ -44,6 +44,16 @@ The project is a playable learning prototype focused on connecting exploration, 
       <br><sub>Activated cave totem and 2D lighting</sub>
     </td>
   </tr>
+  <tr>
+    <td width="50%">
+      <img src="docs/images/forgotten-sigils-dark-cave-dialogue.png" alt="Dialogue appearing while the player explores a dark cave">
+      <br><sub>Dialogue and visibility-gated exploration</sub>
+    </td>
+    <td width="50%">
+      <img src="docs/images/forgotten-sigils-hedge-maze.png" alt="The player navigating a hedge maze with log enemies">
+      <br><sub>Hedge-maze exploration and charging enemies</sub>
+    </td>
+  </tr>
 </table>
 
 ## Controls
